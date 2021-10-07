@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9775b803-e10e-4a38-8594-9ee35238c9c4" name="SBoschHome" url="http://localhost/SBoschHome">
+        <fileTransfer mountedRoot="C:\xampp\htdocs\SBoschHome" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
