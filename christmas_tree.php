@@ -17,36 +17,27 @@
     if (isset($_POST["numFlats"])) {
     $num = intval($_POST["numFlats"]);
 
-
         for ($i = 0; $i < $num; $i++) {
 
             for ($j = $i; $j < $num; $j++) {
-                echo "_";
+               echo "<font color=\"#87ceeb\">_</font>";
+          //   echo"<span style='color: skyblue'>*</span>";
 			}
-
 			for ($k = $num - $i; $k < $num+1; $k++) {
+               echo "*";
 
+            }
+            for ($k = $num - $i; $k < $num; $k++) {
                 echo "*";
-
-
-
-
-            }echo "<br>";
-
-
+            }
+            for ($j = $i; $j < $num; $j++) {
+                echo "<font color=\"#87ceeb\">_</font>";
+           //   echo"<span style='color: skyblue'>*</span>"
+            }
+            echo "<br>";
 		}
     }
     ?>
-
-
-
-
-
-
-
-
 </div>
     </body>
 </html>
-
-
