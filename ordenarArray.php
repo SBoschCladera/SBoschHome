@@ -19,7 +19,7 @@ for ($i = 0; $i <$total -1;$i++) {
             $posMin = $i;
         }
         $aux = $num[$i];
-        $num[i] = $num[$posMin];
+        $num[$i] = $num[$posMin];
         $num[$posMin] = $aux;
     }
 
