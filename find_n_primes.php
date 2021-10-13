@@ -12,41 +12,38 @@
 </form>
 <div>
     <?php
-
-
     function getDivisors($num){
-        //TODO: YOUR CODE HERE
-
-        $divisors = array();
-
-
-        for($i = 1; $i<$num;$i++){
-            if($num %$i == 0) {
-               $divisors[] = $i;
+        $divisors = Array();
+        for($i=1; $i<$num; $i++){
+            if($num%$i == 0){
+                $divisors[] = $i;
             }
         }
         return $divisors;
     }
-    function isPrimeNum($num){
 
+    function isPrimeNum($num){
         $divisors = getDivisors($num);
-        if(count(getDivisors($num)) == 2){
+        if(count($divisors) == 1){
             return true;
         }
-            return false;
-        // return count(getDivisors($num)) == 2;   OTRA OPCIÓN MÁS OPTIMIZADA
-     }
+        return false;
+    }
 
     if (isset($_POST["num"])) {
         $num = intval($_POST["num"]);
-        //TODO: YOUR CODE HERE
-
-
-
-
-
-
-
+        $i = 0;
+        $primes = Array();
+        while(count($primes) < $num){
+            $i++;
+            if(isPrimeNum($i)){
+                $primes[] = $i;
+            }
+        }
+        echo "First ".$num." prime numbers are: <br>";
+        foreach ($primes as $prime) {
+            echo "- ".$prime."<br>";
+        }
     }
     ?>
 </div>
