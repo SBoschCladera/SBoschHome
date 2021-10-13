@@ -19,10 +19,6 @@
 
 
 
-
-
-
-
     if (isset($_POST["pass"])) {
     $num = intval($_POST["pass"]);
     }
