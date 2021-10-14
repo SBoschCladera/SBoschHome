@@ -10,7 +10,7 @@
     </label>
     <input type="submit"/>
 </form>
-<div style="background-color: skyblue; display: inline-block;">
+<div>
 
     <?php
 
@@ -18,13 +18,10 @@
 
 
 
-
     if (isset($_POST["pass"])) {
     $num = intval($_POST["pass"]);
     }
     ?>
-
-
 </div>
     </body>
 </html>
