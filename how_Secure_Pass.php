@@ -2,7 +2,7 @@
 <head>
     <title>How secure is your password</title>
     <style>
-        body{
+        body {
             background-color: #376a82;
         }
     </style>
@@ -21,17 +21,19 @@
 
     // $pass = intval($_POST["pass"]);
 
+    $operacionesPorSegundo = 1000;
 
-    function contarCaracteres($pass){
-
-        $pass = intval($_POST["pass"]);
-        return mb_strlen($pass)."<br>";
+    function contarCaracteres()
+    {
+        $pass = $_POST["pass"];
+        return strlen($pass) . "<br>";
     }
 
-    function colorFondo(){
+    function colorFondo()
+    {
 
-        $pass = intval($_POST["pass"]);
-        $numDigitos = mb_strlen($pass);
+        $pass = $_POST["pass"];
+        $numDigitos = strlen($pass);
 
         if ($numDigitos > 0 && $numDigitos <= 4) {
             echo '<body style="background-color:#cc0000">';
@@ -39,76 +41,88 @@
             echo '<body style="background-color:darkorange">';
         } else if ($numDigitos > 8 && $numDigitos <= 15) {
             echo '<body style="background-color:yellow">';
-        } else if($numDigitos >15){
+        } else if ($numDigitos > 15) {
             echo '<body style="background-color:green">';
         }
-        //  echo contarCaracteres($pass)."<br>";
     }
 
-    function compararArray($pass){
-
+    function compararArray($pass)
+    {
         $passwordsUsados = array("123456", "123456789.", "qwerty", "password", "12345", "qwerty123", "1q2w3e", "12345678", "111111", "1234567890");
-
-        for ($i = 0; $i < 10;$i++){
-            if($passwordsUsados[$i] != $pass){
-            } else {
-                echo "Esta contraseña se encuentra entre las 10 más usadas del año 2020"."<br>";
-            }
+        if (in_array($pass, $passwordsUsados)) {
+            echo "Esta contraseña se encuentra entre las 10 más usadas del año 2020" . "<br>";
+        } else {
+            echo " ";
         }
+
     }
 
-    function calcularTiempo($pass){
+    function calcularTiempo($pass)
+    {
 
-        $pass = intval($_POST["pass"]);
-        $numDigitos = mb_strlen($pass);
+        $pass = $_POST["pass"];
+        $numDigitos = strlen($pass);
         return pow(256, $numDigitos);
     }
+    function calculoAnyos($pass)
+    {
+        return floor((calcularTiempo($pass) / 31536000)/ 1000);
+    }
+    function restAnyos($pass)
+    {
+        return floor(calcularTiempo($pass) % 31536000);
+    }
+    function calculoMeses($pass)
+    {
+        return floor((restAnyos($pass) / 2592000)/1000);
+    }
+    function restoMeses($pass)
+    {
+        return floor(restAnyos($pass) % 2592000);
+    }
+    function calculoDias($pass)
+    {
+        return floor((restoMeses($pass) / 86400)/1000);
+    }
+    function restoDias($pass)
+    {
+        return floor(restoMeses($pass) % 86400);
+    }
+    function calculoHoras($pass)
+    {
+        return floor((restoDias($pass) / 3600)/1000);
+    }
+    function restoHoras($pass)
+    {
+        return floor(restoDias($pass) % 3600);
+    }
+    function calculoMinutos($pass)
+    {
+        return floor((restoHoras($pass) / 60)/1000);
+    }
+    function restoMinutos($pass)
+    {
+        return floor(restoHoras($pass) % 60);
+    }
 
-    function calculoMinutos($pass){
-        return calcularTiempo($pass) / 60;
-    }
-    function restoSegundos($pass){
-        return calcularTiempo($pass) % 60;
-    }
-    function calculoHoras($pass){
-        return calculoMinutos($pass) / 60;
-    }
-    function calculoDias($pass){
-        return calculoHoras($pass) / 7;
-    }
-    function calculoSemanas($pass){
-        return calculoDias($pass) / 7;
-    }
-    function calculoMeses($pass){
-        return calculoDias($pass) / 30;
-    }
-    function calculoAnyos($pass){
-        return calculoDias($pass) / 365;
-    }
 
-    function mostrarTiempoCrackeo($pass){
 
-        echo calcularTiempo($pass)." segundos"."<br>";
-        echo calculoMinutos($pass)." minutos"."<br>";
-        echo calculoHoras($pass)." horas"."<br>";
-        echo calculoDias($pass)." dias"."<br>";
-        echo calculoSemanas($pass)." semanas"."<br>";
-        echo calculoMeses($pass)." meses"."<br>";
-        echo calculoAnyos($pass)." años"."<br>";
+    function mostrarTiempoCrackeo($pass)
+    {
+
+        // echo calcularTiempo($pass)." segundos"."<br>";
+        echo calculoAnyos($pass). " años, ". calculoMeses($pass) . restAnyos. meses, ".calculoDias($pass) . " dias, " ;// . calculoHoras($pass) .
+         //  " horas, " . calculoMinutos($pass) . " minutos y " . restoSegundos($pass) . " segundos" . "<br>";
 
     }
-
 
 
     if (isset($_POST["pass"])) {
-        $pass = intval($_POST["pass"]);
-
-        echo contarCaracteres($pass);
-        echo colorFondo();
-        echo compararArray($pass);
-        echo mostrarTiempoCrackeo($pass);
-
-
+        $pass = $_POST["pass"];
+        echo contarCaracteres();
+        colorFondo();
+        compararArray($pass);
+        mostrarTiempoCrackeo($pass);
     }
 
 
