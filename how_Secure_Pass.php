@@ -74,7 +74,7 @@
     }
     function calculoMeses($pass)
     {
-        return floor((restAnyos($pass) / 2592000)/1000);
+        return floor(restAnyos($pass) / 2592000);
     }
     function restoMeses($pass)
     {
@@ -82,7 +82,7 @@
     }
     function calculoDias($pass)
     {
-        return floor((restoMeses($pass) / 86400)/1000);
+        return floor(restoMeses($pass) / 86400);
     }
     function restoDias($pass)
     {
@@ -90,7 +90,7 @@
     }
     function calculoHoras($pass)
     {
-        return floor((restoDias($pass) / 3600)/1000);
+        return floor(restoDias($pass) / 3600);
     }
     function restoHoras($pass)
     {
@@ -98,7 +98,7 @@
     }
     function calculoMinutos($pass)
     {
-        return floor((restoHoras($pass) / 60)/1000);
+        return floor(restoHoras($pass) / 60);
     }
     function restoSegundos($pass)
     {
@@ -109,10 +109,7 @@
 
     function mostrarTiempoCrackeo($pass)
     {
-
-        // echo calcularTiempo($pass)." segundos"."<br>";
-        echo calculoAnyos($pass). " años, ". calculoMeses($pass) ." meses, ".calculoDias($pass) . " dias, "  . calculoHoras($pass) ." horas, " . calculoMinutos($pass) . " minutos y " .restoSegundos($pass) . " segundos";
-echo restAnyos($pass);
+        echo calculoAnyos($pass). " años, ". calculoMeses($pass) ." meses, ".calculoDias($pass) . " dias, "  . calculoHoras($pass) ." horas, " . calculoMinutos($pass) . " minutos y " .restoSegundos($pass) . " segundos.";
     }
 
 
