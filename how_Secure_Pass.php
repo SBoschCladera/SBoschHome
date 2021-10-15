@@ -111,7 +111,7 @@
     {
 
         // echo calcularTiempo($pass)." segundos"."<br>";
-        echo calculoAnyos($pass). " años, ". calculoMeses($pass) . " meses, ".calculoDias($pass) . " dias, " ;// . calculoHoras($pass) .
+        echo calculoAnyos($pass). " años, ". calculoMeses($pass) ." meses, ".calculoDias($pass) . " dias, " ;// . calculoHoras($pass) .
          //  " horas, " . calculoMinutos($pass) . " minutos y " . restoSegundos($pass) . " segundos" . "<br>";
 
     }
