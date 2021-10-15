@@ -66,8 +66,11 @@
     }
     function calculoAnyos($pass)
     {
-        return floor((calcularTiempo($pass) / 31536000)/ 1000);
+        if((calcularTiempo($pass) / 31536000)/ 1000 > 1){
+        return " ";
     }
+        return floor((calcularTiempo($pass) / 31536000)/ 1000);
+        }
     function restAnyos($pass)
     {
         return calcularTiempo($pass) % 31536000;
