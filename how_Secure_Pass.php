@@ -3,7 +3,7 @@
     <title>How secure is your password</title>
     <style>
         body{
-          background-color: #376a82;
+            background-color: #376a82;
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 
     <?php
 
-   // $pass = intval($_POST["pass"]);
+    // $pass = intval($_POST["pass"]);
 
 
     function contarCaracteres($pass){
 
-       $pass = intval($_POST["pass"]);
-       return mb_strlen($pass)."<br>";
+        $pass = intval($_POST["pass"]);
+        return mb_strlen($pass)."<br>";
     }
 
     function colorFondo(){
@@ -33,28 +33,28 @@
         $pass = intval($_POST["pass"]);
         $numDigitos = mb_strlen($pass);
 
-           if ($numDigitos > 0 && $numDigitos <= 4) {
-               echo '<body style="background-color:#cc0000">';
-           } else if ($numDigitos > 4 && $numDigitos <= 8) {
-               echo '<body style="background-color:darkorange">';
-           } else if ($numDigitos > 8 && $numDigitos <= 15) {
-               echo '<body style="background-color:yellow">';
-           } else if($numDigitos >15){
-               echo '<body style="background-color:green">';
-           }
-      //  echo contarCaracteres($pass)."<br>";
+        if ($numDigitos > 0 && $numDigitos <= 4) {
+            echo '<body style="background-color:#cc0000">';
+        } else if ($numDigitos > 4 && $numDigitos <= 8) {
+            echo '<body style="background-color:darkorange">';
+        } else if ($numDigitos > 8 && $numDigitos <= 15) {
+            echo '<body style="background-color:yellow">';
+        } else if($numDigitos >15){
+            echo '<body style="background-color:green">';
+        }
+        //  echo contarCaracteres($pass)."<br>";
     }
 
     function compararArray($pass){
 
-       $passwordsUsados = array("123456", "123456789.", "qwerty", "password", "12345", "qwerty123", "1q2w3e", "12345678", "111111", "1234567890");
+        $passwordsUsados = array("123456", "123456789.", "qwerty", "password", "12345", "qwerty123", "1q2w3e", "12345678", "111111", "1234567890");
 
-           for ($i = 0; $i < 10;$i++){
-                 if($passwordsUsados[$i] != $pass){
-                 } else {
-                     echo "Esta contraseña se encuentra entre las 10 más usadas del año 2020"."<br>";
-                 }
-           }
+        for ($i = 0; $i < 10;$i++){
+            if($passwordsUsados[$i] != $pass){
+            } else {
+                echo "Esta contraseña se encuentra entre las 10 más usadas del año 2020"."<br>";
+            }
+        }
     }
 
     function calcularTiempo($pass){
@@ -65,7 +65,7 @@
     }
 
     function calculoMinutos($pass){
-         return calcularTiempo($pass) / 60;
+        return calcularTiempo($pass) / 60;
     }
     function restoSegundos($pass){
         return calcularTiempo($pass) % 60;
@@ -101,12 +101,12 @@
 
 
     if (isset($_POST["pass"])) {
-    $pass = intval($_POST["pass"]);
+        $pass = intval($_POST["pass"]);
 
-      echo contarCaracteres($pass);
-      echo colorFondo();
-      echo compararArray($pass);
-      echo mostrarTiempoCrackeo($pass);
+        echo contarCaracteres($pass);
+        echo colorFondo();
+        echo compararArray($pass);
+        echo mostrarTiempoCrackeo($pass);
 
 
     }
@@ -114,5 +114,5 @@
 
     ?>
 </div>
-    </body>
+</body>
 </html>
