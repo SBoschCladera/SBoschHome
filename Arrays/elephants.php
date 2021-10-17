@@ -5,43 +5,29 @@
 $contents = file_get_contents("https://dawsonferrer.com/allabres/apis_solutions/elephants.php");
 $elephants = json_decode($contents, true);
 
-function getSortedElephantsByNumber($elephants){
+function getSortedElephantsByNumber($elephants)
+{
     //TODO: Return an array of elephants sorted by it's number (ascending order).
     //NOTES 1: You receive a elephants multidimensional array, you can view it's content with var_dump() function.
     //NOTES 2:You CAN'T use any sorting PHP built-in function.
 
     $total = count($elephants);
-    // var_dump( $total);
 
-    for ($i = 0; $i < $total -1; $i++){
-    $posMin = $i;
+    for ($i = 0; $i < $total - 1; $i++) {
 
-    for ($j = $i; $j < $total; $j++){
+        $aux[] = array();
+        for ($j = 0; $j < $total - 1; $j++) {
+            if ($elephants[$j]['number'] > $elephants[$j + 1]['number']) {
 
-        if ($elephants[$j] < $elephants[$posMin]) {
-            $posMin = $j;
+                $aux = $elephants[$j];
+                $elephants[$j] = $elephants[$j + 1];
+                $elephants[$j + 1] = $aux;
+            }
         }
     }
-        $aux = $elephants[$i];
-        $elephants[$i] = $elephants[$posMin];
-        $num[$posMin] = $aux;
-
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
+    return $elephants;
 }
+
 ?>
 
 <html lang="es">
@@ -68,7 +54,11 @@ function getSortedElephantsByNumber($elephants){
 <table>
     <thead>
     <tr>
-        <th colspan="6">Elephants (<?php ////TODO: Logic to print the number of elephants. ?>)</th>
+        <th colspan="6">Elephants (<?php ////TODO: Logic to print the number of elephants.
+
+                    echo count($elephants);
+
+                                    ?>)</th>
     </tr>
     <tr>
         <th colspan="3">Unsorted elephants</th>
@@ -86,6 +76,19 @@ function getSortedElephantsByNumber($elephants){
     <tbody>
     <?php
     //TODO: Logic to print the table body.
+
+    $total = count($elephants);
+    $elefantesOrdenados  = getSortedElephantsByNumber($elephants);
+
+    for ($i=0;$i < $total;$i++) {
+        echo '<tr><th>'.$elephants[$i]['number'].'</th>';
+        echo '<th>'.$elephants[$i]['name'].'</th>';
+        echo '<th>'.$elephants[$i]['species'].'</th>';
+
+        echo '<th>' . $elefantesOrdenados[$i]['number'] . '</th>';
+        echo '<th>' . $elefantesOrdenados[$i]['name'] . '</th>';
+        echo '<th>' . $elefantesOrdenados[$i]['species'] . '</th></tr>';
+    }
     ?>
     </tbody>
 </table>
