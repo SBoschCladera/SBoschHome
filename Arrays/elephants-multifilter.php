@@ -6,22 +6,85 @@ function getSortedElephantsByNumber($elephants){
     //TODO: Return an array of elephants sorted by it's number (ascending order).
     //NOTES 1: You receive a elephants multidimensional array, you can view it's content with var_dump() function.
     //NOTES 2:You CAN'T use any sorting PHP built-in function.
+
+    $total = count($elephants);
+
+    for($i = 0; $i < $total-1; $i++) {
+        $aux[] = array();
+
+        for ($j = 0; $j < $total - 1; $j++) {
+
+            if ($elephants[$j]['number'] > $elephants[$j + 1]['number']) {
+
+                $aux = $elephants[$j];
+                $elephants[$j] = $elephants[$j + 1];
+                $elephants[$j + 1] = $aux;
+            }
+        }
+    }
+    return $elephants;
 }
 
 function getSortedElephantsByBirth($elephants){
     //TODO: Return an array of elephants sorted by it's birth date (ascending order).
     //NOTES 1: You receive a elephants multidimensional array, you can view it's content with var_dump() function.
     //NOTES 2:You CAN'T use any sorting PHP built-in function.
+
+    $total = count($elephants);
+
+    for($i = 0; $i < $total -1; $i++){
+       $aux[] = array();
+
+        for($j = 0;$j < $total -1;$j++){
+            if($elephants[$j]['dob'] > $elephants[$j+1]['dob']){
+
+            $aux = $elephants[$j];
+            $elephants[$j] = $elephants[$j+1];
+            $elephants[$j+1] = $aux;
+            }
+        }
+    }
+    return $elephants;
 }
+
 
 function getSortedElephantsByHavingImage($elephants){
     //TODO: Return an array of elephants sorted depending on whether they have an image (those who have an image go first).
     //NOTES 1: You receive a elephants multidimensional array, you can view it's content with var_dump() function.
     //NOTES 2:You CAN'T use any sorting PHP built-in function.
+
+    $total = count($elephants);
+
+    for($i= 0;$i< $total-1;$i++){
+        $aux[] = array();
+
+        for ($j = 0;$j < $total-1;$j++ ){
+            if($elephants[$j]['image'] > $elephants[$j+1]['image']){
+
+                $aux = $elephants[$j];
+                $elephants[$j] = $elephants[$j+1];
+                $elephants[$j+1] = $aux;
+            }
+        }
+    }
+    return $elephants;
 }
 
 if(isset($_GET["sortingCriteria"])){
     //TODO: Logic to call a function depending on the sorting criteria.
+
+    $mostrar = ($_GET["sortingCriteria"]);
+
+    if(strcmp($mostrar,'number') == 0){
+        $elephants = getSortedElephantsByNumber($elephants);
+
+    }else if (strcmp($mostrar,'birth') == 0){
+       $elephants = getSortedElephantsByBirth($elephants);
+
+    } else if (strcmp($mostrar,'image') == 0){
+        $elephants = getSortedElephantsByHavingImage($elephants);
+    }
+
 }
 
 ?>
@@ -111,6 +174,24 @@ if(isset($_GET["sortingCriteria"])){
         <?php
         //TODO: Logic to print the elephants cards.
         //NOTES 1: You can copy the markup language from the solution deployment.
+
+        for ($i = 0; $i < count($elephants); $i++) {
+            // var_dump($elephants);
+
+            echo '<div class="col-md-4">';
+            echo '<div class="card" style="width: 18rem">';
+            echo '<img src="' . $elephants[$i]["image"] . '"  class="card-img-top" alt="...">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title">' . $elephants[$i]["number"] . " - " . $elephants[$i]["name"] . '</h5>';
+            echo '<h6 class="card-subtitle mb2 text-muted">' . "Species: " . '&nbsp' . $elephants[$i]["species"] . '</h6>';
+            echo '<h6 class="card-subtitle mb2 text-muted">' . "Year of birth: " . '&nbsp' . $elephants[$i]["dob"] . '</h6>';
+            echo '<p class="card-text">' . $elephants[$i]["note"] . '</p>';
+            echo '<a href="' . $elephants[$i]["wikilink"] . '" class="btn mr-2" target="_blank">';
+            echo '<i class="fas fa-link"></i>';
+            echo ' "Visit elephant"';
+            echo '</a>';
+            echo '</div></div></div>';
+        }
         ?>
 
     </div>
