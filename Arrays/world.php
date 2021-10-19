@@ -11,11 +11,11 @@ function getUnsortedCities($world){
     //NOTES 2:You CAN'T use any sorting PHP built-in function.
     foreach ($world as $country) {
         foreach ($country as  $cities) {
-            if(is_array($cities) || is_object($cities)) {
+         //   if(is_array($cities) || is_object($cities)) {
                 foreach ($cities as $city) {
                     $unsortedCities[] = $city;
                 }
-            }
+           // }
         }
     }
     return $unsortedCities;
@@ -31,7 +31,7 @@ function getSortedCitiesByPopulation($cities){
     $sortedCities = getUnsortedCities($cities);
 
     for ($i = 0; $i < count($sortedCities) - 1; $i++) {
-        $aux[] = array();
+    //    $aux[] = array();
 
         for ($j = $i+1; $j < count($sortedCities); $j++) {
             if ($sortedCities[$j]['Population'] < $sortedCities[$i]['Population']) {
@@ -72,7 +72,7 @@ function getSortedCitiesByPopulation($cities){
     <tr>
         <th colspan="6">Cities of the world (<?php
               //TODO: Logic to print the number of cities.
-         //   echo count();
+            echo count(getUnsortedCities($world));
               ?>)
 
         </th>
@@ -95,20 +95,18 @@ function getSortedCitiesByPopulation($cities){
     //TODO: Logic to print the table body.
 
 
-   //  $UnsortedArray = getUnsortedCities($world);
-   //  $sortedArray = getSortedCitiesByPopulation($cities);
-  //  for ($i = 0; $i < count($UnsortedArray); $i++) {
-      //  echo "<tr>
-                  //          <td>" . $UnsortedArray[$i]["ID"] . "</td>
-                //            <td>" . $UnsortedArray[$i]["Name"] . "</td>
-                  //          <td>" . $UnsortedArray[$i]["Population"] . "</td>
-                  //          <td>" . $sortedArray[$i]["ID"] . "</td>
-                    //        <td>" . $sortedArray[$i]["Name"] . "</td>
-                  //          <td>" . $sortedArray[$i]["Population"] . "</td>
-       //                   </tr>";
-  //  }
-
-var_dump(getUnsortedCities($world));
+     $UnsortedArray = getUnsortedCities($world);
+     $sortedArray = getSortedCitiesByPopulation($world);
+    for ($i = 0; $i < count($UnsortedArray); $i++) {
+        echo "<tr>
+                  <td>" . $UnsortedArray[$i]["ID"] . "</td>
+                  <td>" . $UnsortedArray[$i]["Name"] . "</td>
+                  <td>" . $UnsortedArray[$i]["Population"] . "</td>
+                  <td>" . $sortedArray[$i]["ID"] . "</td>
+                  <td>" . $sortedArray[$i]["Name"] . "</td>
+                  <td>" . $sortedArray[$i]["Population"] . "</td>
+              </tr>";
+    }
 
     ?>
     </tbody>
