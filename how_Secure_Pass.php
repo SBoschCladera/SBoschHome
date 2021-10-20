@@ -37,13 +37,6 @@
                 echo "rgb(55, 130, 65)";
             }
         }
-           if(isset($_POST["pass"])) {
-                  $pass = ($_POST["pass"]);
-
-                  if ($pass != null) {
-                 colorFondo($pass);
-                }
-             }
         ?>;
     </style>
 </head>
@@ -151,7 +144,7 @@
         echo "<div style='display:flex;align-items: center;justify-content: center'>
                 <p style='max-width: 1600px; max-height:60px; padding:30px; text-align: center; font-size: 35px';>";
 
-       echo  calculoTiempo($pass);
+        echo  calculoTiempo($pass);
         echo "</p></div>";
     }
 

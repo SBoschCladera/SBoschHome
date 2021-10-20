@@ -11,11 +11,11 @@ function getUnsortedCities($world){
     //NOTES 2:You CAN'T use any sorting PHP built-in function.
     foreach ($world as $country) {
         foreach ($country as  $cities) {
-         //   if(is_array($cities) || is_object($cities)) {
+           if(is_array($cities) || is_object($cities)) {
                 foreach ($cities as $city) {
                     $unsortedCities[] = $city;
                 }
-           // }
+           }
         }
     }
     return $unsortedCities;
