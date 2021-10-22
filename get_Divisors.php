@@ -1,11 +1,11 @@
 <html lang="es">
 <head>
-    <title>Christmas tree</title>
+    <title>Get Divisors</title>
 </head>
 <body>
-<form method="post" action="christmas_tree.php">
+<form method="post" action="get_Divisors.php">
     <label>
-        Number of flats:
+        Number:
         <input type="text" name="num"/>
     </label>
     <input type="submit"/>
