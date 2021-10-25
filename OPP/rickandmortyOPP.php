@@ -1,5 +1,5 @@
 <?php
-$seed = 0000; //TODO: LAST 4 NUMBERS OF YOUR DNI.
+$seed = 1913; //TODO: LAST 4 NUMBERS OF YOUR DNI.
 $api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.php?seed=" . $seed . "&data=";
 
 //NOTE: Arrays unsorted
@@ -9,6 +9,9 @@ $locations = json_decode(file_get_contents($api_url . "locations"), true);
 
 
 
+$characters_obj = new characters($characters);
+$locations_obj = new locations($locations);
+$episodes_obj = new episodes($episodes);
 
 
 

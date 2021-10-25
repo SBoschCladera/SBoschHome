@@ -1,12 +1,5 @@
 <?php
 
-$seed = 0436; //TODO: LAST 4 NUMBERS OF YOUR DNI.
-$api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.php?seed=" . $seed . "&data=";
-
-$episodes = json_decode(file_get_contents($api_url . "episodes"), true);
-
-var_dump($episodes);
-
 class episodes
 {
     private $id;
@@ -16,7 +9,7 @@ class episodes
     public $created;
     public $characters = array();
 
-       public function __construct($id, $name, $air_date, $episode, $created, array $characters)
+    public function __construct($id, $name, $air_date, $episode, $created, array $characters)
     {
         $this->id = $id;
         $this->name = $name;
@@ -119,7 +112,7 @@ class episodes
     /**
      * @return array
      */
-    public function getCharacters()
+    public function getCharacters(): array
     {
         return $this->characters;
     }
@@ -128,10 +121,9 @@ class episodes
      * @param array $characters
      * @return episodes
      */
-    public function setCharacters($characters)
+    public function setCharacters(array $characters): episodes
     {
         $this->characters = $characters;
         return $this;
     }
-
 }

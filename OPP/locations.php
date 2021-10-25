@@ -1,13 +1,7 @@
 <?php
 
-$seed = 0436; //TODO: LAST 4 NUMBERS OF YOUR DNI.
-$api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.php?seed=" . $seed . "&data=";
-
-$locations = json_decode(file_get_contents($api_url . "locations"), true);
-
-
-var_dump($locations);
-class locations{
+class locations
+{
 
     public $id;
     public $name;
@@ -120,7 +114,7 @@ class locations{
     /**
      * @return array
      */
-    public function getResidents()
+    public function getResidents(): array
     {
         return $this->residents;
     }
@@ -129,12 +123,10 @@ class locations{
      * @param array $residents
      * @return locations
      */
-    public function setResidents($residents)
+    public function setResidents(array $residents): locations
     {
         $this->residents = $residents;
         return $this;
     }
 
-
 }
-

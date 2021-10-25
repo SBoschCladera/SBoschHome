@@ -1,14 +1,8 @@
 <?php
 
-$seed = 0000; //TODO: LAST 4 NUMBERS OF YOUR DNI.
-$api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.php?seed=" . $seed . "&data=";
-
-$characters = json_decode(file_get_contents($api_url . "characters"), true);
-
-
-
 class characters
 {
+
 public $id;
 public $name;
 public $status;
@@ -35,21 +29,6 @@ public function __construct($id, $name,$status, $species, $type, $gender, $origi
     $this->created = $created;
     $this->episodes = $episodes;
 }
-
-function getCharacters($id, $name,$status, $species, $type, $gender, $origin, $location, $image, $created, array $episodes){
-
-    global $characters;
-    $character= array();
-
-    for ($i= 0;$i <count($characters);$i++) {
-
-        $character[$i] = new characters(".{$this->id}.", ".{$this->name}.", ".{$this->status}.", ".{$this->species}.", ".{$this->type}.", ".{$this->gender}.", );
-
-    }
-}
-
-
-
 
     /**
      * @return mixed
@@ -232,18 +211,18 @@ function getCharacters($id, $name,$status, $species, $type, $gender, $origin, $l
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getEpisodes()
+    public function getEpisodes(): array
     {
         return $this->episodes;
     }
 
     /**
-     * @param mixed $episodes
+     * @param array $episodes
      * @return characters
      */
-    public function setEpisodes($episodes)
+    public function setEpisodes(array $episodes): characters
     {
         $this->episodes = $episodes;
         return $this;
