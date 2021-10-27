@@ -1,6 +1,6 @@
 <?php
 
-class locations
+class location
 {
 
     public $id;
@@ -31,7 +31,7 @@ class locations
 
     /**
      * @param mixed $id
-     * @return locations
+     * @return location
      */
     public function setId($id)
     {
@@ -49,7 +49,7 @@ class locations
 
     /**
      * @param mixed $name
-     * @return locations
+     * @return location
      */
     public function setName($name)
     {
@@ -67,7 +67,7 @@ class locations
 
     /**
      * @param mixed $type
-     * @return locations
+     * @return location
      */
     public function setType($type)
     {
@@ -85,7 +85,7 @@ class locations
 
     /**
      * @param mixed $dimension
-     * @return locations
+     * @return location
      */
     public function setDimension($dimension)
     {
@@ -103,7 +103,7 @@ class locations
 
     /**
      * @param mixed $created
-     * @return locations
+     * @return location
      */
     public function setCreated($created)
     {
@@ -121,9 +121,9 @@ class locations
 
     /**
      * @param array $residents
-     * @return locations
+     * @return location
      */
-    public function setResidents(array $residents): locations
+    public function setResidents(array $residents): location
     {
         $this->residents = $residents;
         return $this;

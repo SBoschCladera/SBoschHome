@@ -4,8 +4,8 @@ $api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.ph
 
 //NOTE: Arrays unsorted
 $characters = json_decode(file_get_contents($api_url . "characters"), true);
-$episodes = json_decode(file_get_contents($api_url . "episodes"), true);
-$locations = json_decode(file_get_contents($api_url . "locations"), true);
+$episodes = json_decode(file_get_contents($api_url . "episode"), true);
+$locations = json_decode(file_get_contents($api_url . "location"), true);
 
 function getSortedCharactersById($characters)
 {
@@ -112,12 +112,12 @@ function mapCharacters($characters)
             }
         }
 
-        for ($j = 0; $j < count($characters[$i]["episodes"]); $j++) {
+        for ($j = 0; $j < count($characters[$i]["episode"]); $j++) {
             for ($k = 0; $k < count($sortedEpisodes); $k++) {
-                if ($characters[$i]["episodes"][$j] == intval($sortedEpisodes[$k]["id"])) {
-                    $characters[$i]["episodes"][$j] = $sortedEpisodes[$k]["name"];
-                } elseif ($characters[$i]["episodes"][$j] == 0) {
-                    $characters[$i]["episodes"][$j] = "Unknown";
+                if ($characters[$i]["episode"][$j] == intval($sortedEpisodes[$k]["id"])) {
+                    $characters[$i]["episode"][$j] = $sortedEpisodes[$k]["name"];
+                } elseif ($characters[$i]["episode"][$j] == 0) {
+                    $characters[$i]["episode"][$j] = "Unknown";
                 }
             }
         }

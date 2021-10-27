@@ -1,6 +1,6 @@
 <?php
 
-class characters
+class character
 {
 
 public $id;

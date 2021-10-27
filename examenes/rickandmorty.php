@@ -4,8 +4,8 @@ $api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.ph
 
 //NOTE: Arrays unsorted
 $characters = json_decode(file_get_contents($api_url . "characters"), true);
-$episodes = json_decode(file_get_contents($api_url . "episodes"), true);
-$locations = json_decode(file_get_contents($api_url . "locations"), true);
+$episodes = json_decode(file_get_contents($api_url . "episode"), true);
+$locations = json_decode(file_get_contents($api_url . "location"), true);
 
 function getSortedCharactersById($characters)
 {

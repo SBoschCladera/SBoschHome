@@ -1,6 +1,6 @@
 <?php
 
-class episodes
+class episode
 {
     private $id;
     public $name;
@@ -29,7 +29,7 @@ class episodes
 
     /**
      * @param mixed $id
-     * @return episodes
+     * @return episode
      */
     public function setId($id)
     {
@@ -47,7 +47,7 @@ class episodes
 
     /**
      * @param mixed $name
-     * @return episodes
+     * @return episode
      */
     public function setName($name)
     {
@@ -65,7 +65,7 @@ class episodes
 
     /**
      * @param mixed $air_date
-     * @return episodes
+     * @return episode
      */
     public function setAirDate($air_date)
     {
@@ -83,7 +83,7 @@ class episodes
 
     /**
      * @param mixed $episode
-     * @return episodes
+     * @return episode
      */
     public function setEpisode($episode)
     {
@@ -101,7 +101,7 @@ class episodes
 
     /**
      * @param mixed $created
-     * @return episodes
+     * @return episode
      */
     public function setCreated($created)
     {
@@ -119,9 +119,9 @@ class episodes
 
     /**
      * @param array $characters
-     * @return episodes
+     * @return episode
      */
-    public function setCharacters(array $characters): episodes
+    public function setCharacters(array $characters): episode
     {
         $this->characters = $characters;
         return $this;
