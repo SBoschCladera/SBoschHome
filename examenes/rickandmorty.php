@@ -1,42 +1,129 @@
-<?php
-$seed = 0000; //TODO: LAST 4 NUMBERS OF YOUR DNI.
-$api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.php?seed=" . $seed . "&data=";
+/* --------------------MI EXAMEN----------------- */
 
+
+
+<?php
+$seed = 0436; //TODO: LAST 4 NUMBERS OF YOUR DNI.
+
+$api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.php?seed=" . $seed . "&data=";
 //NOTE: Arrays unsorted
 $characters = json_decode(file_get_contents($api_url . "characters"), true);
-$episodes = json_decode(file_get_contents($api_url . "episode"), true);
-$locations = json_decode(file_get_contents($api_url . "location"), true);
+$episodes = json_decode(file_get_contents($api_url . "episodes"), true);
+$locations = json_decode(file_get_contents($api_url . "locations"), true);
 
 function getSortedCharactersById($characters)
 {
     //TODO: Your code here.
+
+    for ($i = 0;$i < count($characters)-1;$i++){
+        for($j = $i+1; $j < count($characters);$j++){
+            if($characters[$j]['id'] < $characters[$i]['id']){
+
+                $aux = $characters[$i];
+                $characters[$i] = $characters[$j];
+                $characters[$j] = $aux;
+            }
+        }
+    }
+    return $characters;
 }
 
 function getSortedCharactersByOrigin($characters)
 {
     //TODO: Your code here.
+
+    for ($i = 0;$i < count($characters)-1;$i++){
+        for($j = $i+1; $j < count($characters);$j++){
+            if($characters[$j]['location'] < $characters[$i]['location']){
+
+                $aux = $characters[$i];
+                $characters[$i] = $characters[$j];
+                $characters[$j] = $aux;
+            }
+        }
+    }
+    return $characters;
 }
 
 function getSortedCharactersByStatus($characters)
 {
     //TODO: Your code here.
+
+    for ($i = 0;$i < count($characters)-1;$i++){
+        for($j = $i+1; $j < count($characters);$j++){
+            if($characters[$j]['status'] < $characters[$i]['status']){
+
+                $aux = $characters[$i];
+                $characters[$i] = $characters[$j];
+                $characters[$j] = $aux;
+            }
+        }
+    }
+    return $characters;
 }
 
 //NOTE: OPTIONAL FUNCTION
 function getSortedLocationsById($locations)
 {
     //TODO: Your code here.
+
+    for ($i = 0;$i < count($locations)-1;$i++){
+        for($j = $i+1; $j < count($locations);$j++){
+            if($locations[$j]['id'] < $locations[$i]['id']){
+
+                $aux = $locations[$i];
+                $locations[$i] = $locations[$j];
+                $locations[$j] = $aux;
+            }
+        }
+    }
+    return $locations;
+
+
 }
 
 //NOTE: OPTIONAL FUNCTION
 function getSortedEpisodesById($episodes)
 {
     //TODO: Your code here.
+
+    for ($i = 0;$i < count($episodes)-1;$i++){
+        for($j = $i+1; $j < count($episodes);$j++){
+            if($episodes[$j]['id'] < $episodes[$i]['id']){
+
+                $aux = $episodes[$i];
+                $episodes[$i] = $episodes[$j];
+                $episodes[$j] = $aux;
+            }
+        }
+    }
+    return $episodes;
+
+
 }
 
 function mapCharacters($characters)
 {
     //TODO: Your code here.
+
+    global $characters;
+    global $episodes;
+    global $locations;
+
+
+    for($i = 0;$i < count($characters); $i++){
+        for($j = 0;$j < count($locations); $j++){
+            if($characters[$i]['origin'] = $locations[$j]['name']){
+                $characters[$i]['Procedencia'] = $locations[$j]['name'];
+            }
+        }
+        for($j = 0;$j < count($episodes); $j++){
+            if($characters[$i]['episodes'] = $episodes[$j]['name']){
+                $characters[$i]['TítuloEpisodio'] = $episodes[$j]['name'];
+            }
+        }
+    }
+    return $characters;
 }
 
 //NOTE: Function to render each character card HTML. Don't edit.
@@ -112,6 +199,27 @@ $mappedCharacters = mapCharacters($characters);
             <div class="row">
                 <?php
                 //TODO: Your code here.
+
+
+                $characterId = getSortedCharactersById($characters);
+
+                /*   for ($i = 0;$i < count($characterId);$i++){
+                      echo '<div class="col-md-4 col-sm-12 col-xs-12">';
+                      echo '<div class="card mb-4 box-shadow bg-light">';
+                      echo '<img class="card-img-top" src=".characterId[$i]['image']" alt="https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/images/character_115_avatar.jpg">';
+                      echo '<div class="card-body">';
+                      echo '<h5 class="card-title">. $characterId[$i]["name"].</h5>';
+                      echo '<div class="alert alert-success" style="padding:0;" role="alert">.$characterId[$i]["status"]. - .$characterId[$i]["species"]</div>';
+                      echo '<form><div class="mb-3" style="margin-bottom:0!important;">';
+                      echo '<label for="exampleInputEmail1" class="form-label" style="margin-bottom: 0;">';
+                      echo '<strong>Origin:</strong></label><div id="emailHelp" class="form-text" style="margin-top:0;">. loca.</div></div><div class="mb-3">';
+                      echo '<label for="exampleInputEmail1" class="form-label" style="margin-bottom: 0;"><strong>Last known location:</strong></label><div id="emailHelp" class="form-text" style="margin-top:0;">Earth (Replacement Dimension)</div></div></form><div class="d-flex justify-content-between align-items-center"><div class="btn-group"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#characterModal_115">View episodes</button><!-- Modal --><div class="modal fade" id="characterModal_115" tabindex="-1" aria-labelledby="characterModalLabel_115" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="characterModalLabel_115">Episodes list</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body"><ol class="list-group"><li class="list-group-item">Get Schwifty</li><li class="list-group-item">The Whirly Dirly Conspiracy</li></ol></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div></div><small class="text-muted">2017-12-26</small></div></div></div></div>';
+                   }*/
+
+                var_dump(getSortedCharactersById($characters));
+                // var_dump(getSortedCharactersByOrigin($characters));
+                // var_dump(getSortedCharactersByStatus($characters));
+
                 ?>
             </div>
         </div>

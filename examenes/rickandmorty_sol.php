@@ -4,21 +4,18 @@ $api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.ph
 
 //NOTE: Arrays unsorted
 $characters = json_decode(file_get_contents($api_url . "characters"), true);
-$episodes = json_decode(file_get_contents($api_url . "episode"), true);
-$locations = json_decode(file_get_contents($api_url . "location"), true);
+$episodes = json_decode(file_get_contents($api_url . "episodes"), true);
+$locations = json_decode(file_get_contents($api_url . "locations"), true);
 
 function getSortedCharactersById($characters)
 {
-    $count = 0;
     for ($i = 0; $i < count($characters); $i++) {
-        for ($j = 0; $j < count($characters); $j++) {
-            if (intval($characters[$i]["id"]) < intval($characters[$j]["id"])) {
+        for ($j = $i; $j < count($characters); $j++) {
+            if (intval($characters[$i]["id"]) > intval($characters[$j]["id"])) {
                 $temp = $characters[$i];
                 $characters[$i] = $characters[$j];
                 $characters[$j] = $temp;
             }
-            $count++;
-            echo ($count).": (".implode(",",array_column($characters, "id")).");<br>";
         }
     }
     return $characters;
@@ -27,8 +24,8 @@ function getSortedCharactersById($characters)
 function getSortedCharactersByOrigin($characters)
 {
     for ($i = 0; $i < count($characters); $i++) {
-        for ($j = 0; $j < count($characters); $j++) {
-            if ($characters[$i]["origin"] < $characters[$j]["origin"]) {
+        for ($j = $i; $j < count($characters); $j++) {
+            if ($characters[$i]["origin"] > $characters[$j]["origin"]) {
                 $temp = $characters[$i];
                 $characters[$i] = $characters[$j];
                 $characters[$j] = $temp;
@@ -41,8 +38,8 @@ function getSortedCharactersByOrigin($characters)
 function getSortedCharactersByStatus($characters)
 {
     for ($i = 0; $i < count($characters); $i++) {
-        for ($j = 0; $j < count($characters); $j++) {
-            if ($characters[$i]["status"] == "Alive" && $characters[$j]["status"] != "Alive") {
+        for ($j = $i; $j < count($characters); $j++) {
+            if ($characters[$i]["status"] != "Alive" && $characters[$j]["status"] == "Alive") {
                 $temp = $characters[$i];
                 $characters[$i] = $characters[$j];
                 $characters[$j] = $temp;
@@ -51,8 +48,8 @@ function getSortedCharactersByStatus($characters)
     }
 
     for ($i = 0; $i < count($characters); $i++) {
-        for ($j = 0; $j < count($characters); $j++) {
-            if ($characters[$i]["status"] == "Dead" && $characters[$j]["status"] == "unknown") {
+        for ($j = $i; $j < count($characters); $j++) {
+            if ($characters[$i]["status"] == "unknown" && $characters[$j]["status"] == "Dead") {
                 $temp = $characters[$i];
                 $characters[$i] = $characters[$j];
                 $characters[$j] = $temp;
@@ -66,8 +63,8 @@ function getSortedCharactersByStatus($characters)
 function getSortedLocationsById($locations)
 {
     for ($i = 0; $i < count($locations); $i++) {
-        for ($j = 0; $j < count($locations); $j++) {
-            if (intval($locations[$i]["id"]) < intval($locations[$j]["id"])) {
+        for ($j = $i; $j < count($locations); $j++) {
+            if (intval($locations[$i]["id"]) > intval($locations[$j]["id"])) {
                 $temp = $locations[$i];
                 $locations[$i] = $locations[$j];
                 $locations[$j] = $temp;
@@ -81,8 +78,8 @@ function getSortedLocationsById($locations)
 function getSortedEpisodesById($episodes)
 {
     for ($i = 0; $i < count($episodes); $i++) {
-        for ($j = 0; $j < count($episodes); $j++) {
-            if (intval($episodes[$i]["id"]) < intval($episodes[$j]["id"])) {
+        for ($j = $i; $j < count($episodes); $j++) {
+            if (intval($episodes[$i]["id"]) > intval($episodes[$j]["id"])) {
                 $temp = $episodes[$i];
                 $episodes[$i] = $episodes[$j];
                 $episodes[$j] = $temp;
@@ -112,12 +109,12 @@ function mapCharacters($characters)
             }
         }
 
-        for ($j = 0; $j < count($characters[$i]["episode"]); $j++) {
+        for ($j = 0; $j < count($characters[$i]["episodes"]); $j++) {
             for ($k = 0; $k < count($sortedEpisodes); $k++) {
-                if ($characters[$i]["episode"][$j] == intval($sortedEpisodes[$k]["id"])) {
-                    $characters[$i]["episode"][$j] = $sortedEpisodes[$k]["name"];
-                } elseif ($characters[$i]["episode"][$j] == 0) {
-                    $characters[$i]["episode"][$j] = "Unknown";
+                if ($characters[$i]["episodes"][$j] == intval($sortedEpisodes[$k]["id"])) {
+                    $characters[$i]["episodes"][$j] = $sortedEpisodes[$k]["name"];
+                } elseif ($characters[$i]["episodes"][$j] == 0) {
+                    $characters[$i]["episodes"][$j] = "Unknown";
                 }
             }
         }
