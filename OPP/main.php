@@ -13,6 +13,9 @@ $charactersjson = json_decode(file_get_contents($api_url . "characters"), true);
 $episodesjson = json_decode(file_get_contents($api_url . "episodes"), true);
 $locationsjson = json_decode(file_get_contents($api_url . "locations"), true);
 
+
+
+var_dump($charactersjson);
 function getSortedCharactersById($characters)
 {
     for ($i = 0; $i < count($characters); $i++) {
