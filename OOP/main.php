@@ -243,7 +243,7 @@ $charactersmapp = mapp($characters, $locations, $episodes);
             </div>
         </div>
     </div>
-
+    // Funcionando
 </main>
 </body>
 </html>
