@@ -3,10 +3,14 @@
 class partido{
 
     private $name;
+    private $acronym;
+    private $logo;
 
-    public function __construct($name)
+       public function __construct($name, $acronym, $logo)
     {
         $this->name = $name;
+        $this->acronym = $acronym;
+        $this->logo = $logo;
     }
 
 
@@ -16,10 +20,33 @@ class partido{
     }
 
 
-    public function setName($name)
+    public function setName($name): void
     {
         $this->name = $name;
-        return $this;
+    }
+
+
+    public function getAcronym()
+    {
+        return $this->acronym;
+    }
+
+
+    public function setAcronym($acronym): void
+    {
+        $this->acronym = $acronym;
+    }
+
+
+    public function getLogo()
+    {
+        return $this->logo;
+    }
+
+
+    public function setLogo($logo): void
+    {
+        $this->logo = $logo;
     }
 
 
