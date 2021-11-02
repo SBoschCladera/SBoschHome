@@ -1,8 +1,12 @@
 <?php
 
-include circunscripciones;
-include partido;
-include provincia;
+/*  https://dawsonferrer.com/allabres/oop/elections/index.php
+    https://dawsonferrer.com/allabres/oop/elections/map.php
+*/
+
+include ("resultado.php");
+include ("partido.php");
+include ("provincia.php");
 
 $resultsContents = file_get_contents("https://dawsonferrer.com/allabres/apis_solutions/elections/api.php?data=results");
 $partiesContents = file_get_contents("https://dawsonferrer.com/allabres/apis_solutions/elections/api.php?data=parties");
@@ -30,14 +34,24 @@ function createProvincia($districts){
 }
 
 
-
-function createcircunscrupciones($results){
+function createresultado($results){
 
     for ($i = 0; $i < count($results); $i++) {
         $resultadosObject[$i] = new resultado($results[$i]['district'],$results[$i]['party'], $results[$i]['votes']);
     }
     return $resultadosObject;
 }
+
+
+
+function mapear($partidosObject,$provinciasObject,$resultadosObject)
+{
+    $map = array();
+
+
+
+
+    }
 
 
 

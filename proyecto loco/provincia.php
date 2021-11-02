@@ -3,7 +3,7 @@
 class provincia{
 
     private $id;
-    private $name
+    private $name;
     private $delegates;
 
  public function __construct($id, $name, $delegates)
@@ -36,8 +36,5 @@ public function setDelegates($delegates): void
 {
     $this->delegates = $delegates;
 }
-
-
-
 
 }
