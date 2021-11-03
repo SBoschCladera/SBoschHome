@@ -6,7 +6,6 @@ private $district;
 private $party;
 private $votes;
 
-
     public function __construct($district, $party, $votes)
     {
         $this->district = $district;
