@@ -17,6 +17,7 @@ $resultsJson = json_decode($resultsContents, true);
 $partiesJson = json_decode($partiesContents, true);
 $districtsJson = json_decode($districtsContents, true);
 
+// var_dump($partiesJson);
 
 function createPartidos($partiesJson)
 {
@@ -49,7 +50,79 @@ function createResultado($resultsJson)
 $partido = createPartidos($partiesJson);
 $provincia = createProvincia($districtsJson);
 $resultado = createResultado($resultsJson);
+echo "<br>.<br>.<br>.<br>";
 
+
+//var_dump($provincia);
+//var_dump($resultado);
+//var_dump($partido);
+
+
+/*
+
+
+function Dhont()
+{
+
+    $porcentajeMin = 3 / 100;
+    $minVotos = totalVotos() / $porcentajeMin;
+
+
+}
+
+echo'<th>Circumscripción</th><th>Partido</th><th>Votos</th><th>Escaños</th>';
+
+ for ($i=0;$i < $resultado;$i++) {
+
+        echo '<td>'.$provincia[$i]['name'].'</td>';
+        echo '<td>'.$partido[$i]['acronym'].'</td>';
+        echo '<td>'.$resultado[$i]['votos'].'</td>';
+        echo '<td>'.$resultado[$i]['escanyos'].'</td>';
+    }
+
+
+
+ var_dump($provincia);
+echo "<br>.<br>.<br>.<br>";
+var_dump($resultado);
+*/
+function map()
+{
+
+    global $districtsJson;
+    global $resultsJson;
+
+    for($i=0;$i<count($resultsJson);$i++){
+        for($j=0;$j<count($districtsJson);$j++){
+            if($resultsJson[$i]['district']=$districtsJson[$j]['name']){
+                $resultsJson[$i]['idProvincia'] = $districtsJson[$j]['id'];
+            }
+        }
+    }
+    return $resultsJson;
+}
+
+ //var_dump(map());
+
+$
+
+if(){}
+
+echo $sum = array_sum(array_column($resultsJson, 'votes'));
+
+function totalVotos()
+{
+
+    global $provincia;
+    global $resultado;
+    $totalVotos = 0;
+    $totalPorProvincia = array();
+
+
+
+}
+
+/*
 
 function totalVotos(){
 
@@ -66,18 +139,3 @@ function totalVotos(){
     }
     return $totalVotos;
 }
-
-
-function Dhont()
-{
-
-    $porcentajeMin = 3 / 100;
-    $minVotos = totalVotos() / $porcentajeMin;
-
-
-}
-
-
-
-
-
