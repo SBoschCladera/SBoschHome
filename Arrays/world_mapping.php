@@ -5,36 +5,37 @@ $cities = json_decode($contents_cities, true);
 $contents_countries = file_get_contents("https://dawsonferrer.com/allabres/apis_solutions/world.php?data=countries");
 $countries = json_decode($contents_countries, true);
 
-function mapCities()
-{
+
     //TODO: Your code here
-    global $cities;
-    global $countries;
-    for($i=0;$i<count($cities);$i++){
-        for($j=0;$j<count($countries);$j++){
-            if($cities[$i]['CountryCode']=$countries[$j]['Code']){
-                $cities[$i]['Pais'] = $countries[$j]['Name'];
+    function mapCities(){
+        global $cities;
+        global $countries;
+        for($i = 0; $i < count($cities); $i++){
+            for($j=0; $j < count($countries); $j++){
+                if($countries[$j]["Code"] == $cities[$i]["CountryCode"]){
+                    $cities[$i]["CountryName"] = $countries[$j]["Name"];
+                }
             }
         }
+        return $cities;
     }
-    return $cities;
-}
 
-function mapCountries()
-{
-    /* Aqui hay que añadir el nombre de las ciudades que tiene un determinado pais. El nombre de las ciudades se guarda en un array. */
-    global $cities;
-    global $countries;
-    for($i=0;$i<count($countries);$i++){
-        for($j=0;$j<count($cities);$j++){
-            if($countries[$i]['Code']=$cities[$j]['CountryCode']){
 
+    function mapCountries(){
+        global $countries;
+        global $cities;
+        foreach ($countries as $countryKey => $countryValue){
+            foreach ($cities as $cityKey => $cityValue){
+                if($countryValue["Code"] == $cityValue["CountryCode"]){
+                    $countries[$countryKey]["Cities"][$cityValue["ID"]] = $cityValue["Name"];
+                }
             }
         }
+        return $countries;
     }
-    return $countries;
-}
+
 
 var_dump($cities[0]);
-var_dump($countries[0]);
 var_dump(mapCities()[0]);
+var_dump($countries[0]);
+var_dump(mapCountries()[0]);
