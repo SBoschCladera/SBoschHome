@@ -1,0 +1,2087 @@
+[
+  {
+    "district": "Madrid",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 957401
+  },
+  { "district": "Madrid", "party": "PARTIDO POPULAR", "votes": 887474 },
+  { "district": "Madrid", "party": "VOX", "votes": 653476 },
+  { "district": "Madrid", "party": "UNIDAS PODEMOS", "votes": 463629 },
+  {
+    "district": "Madrid",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 323076
+  },
+  { "district": "Madrid", "party": "M\u00c1S PA\u00cdS-EQUO", "votes": 201389 },
+  {
+    "district": "Madrid",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 31983
+  },
+  { "district": "Madrid", "party": "RECORTES CERO-GRUPO VERDE", "votes": 5129 },
+  {
+    "district": "Madrid",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 4305
+  },
+  { "district": "Madrid", "party": "PARTIDO HUMANISTA", "votes": 2508 },
+  {
+    "district": "Madrid",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 2099
+  },
+  {
+    "district": "Madrid",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 1895
+  },
+  {
+    "district": "Barcelona",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 638319
+  },
+  {
+    "district": "Barcelona",
+    "party": "ESQUERRA REPUBLICANA DE CATALUNYA-SOBIRANISTES",
+    "votes": 618909
+  },
+  {
+    "district": "Barcelona",
+    "party": "EN COM\u00da PODEM-GUANYEM EL CANVI",
+    "votes": 452482
+  },
+  {
+    "district": "Barcelona",
+    "party": "JUNTS PER CATALUNYA-JUNTS",
+    "votes": 343931
+  },
+  { "district": "Barcelona", "party": "PARTIDO POPULAR", "votes": 225645 },
+  { "district": "Barcelona", "party": "VOX", "votes": 184715 },
+  {
+    "district": "Barcelona",
+    "party": "CANDIDATURA D'UNITAT POPULAR-PER LA RUPTURA",
+    "votes": 179041
+  },
+  {
+    "district": "Barcelona",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 174124
+  },
+  { "district": "Barcelona", "party": "M\u00c1S PA\u00cdS", "votes": 41826 },
+  {
+    "district": "Barcelona",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 34752
+  },
+  {
+    "district": "Barcelona",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 4698
+  },
+  { "district": "Barcelona", "party": "INICIATIVA FEMINISTA", "votes": 3005 },
+  { "district": "Barcelona", "party": "IZQUIERDA EN POSITIVO", "votes": 1178 },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 375879
+  },
+  { "district": "Val\u00e8ncia", "party": "PARTIDO POPULAR", "votes": 306929 },
+  { "district": "Val\u00e8ncia", "party": "VOX", "votes": 245890 },
+  { "district": "Val\u00e8ncia", "party": "UNIDAS PODEMOS", "votes": 191812 },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "M\u00c9S COMPROM\u00cdS",
+    "votes": 122535
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 106820
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 15395
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "ESQUERRA REPUBLICANA DEL PA\u00cdS VALENCI\u00c0",
+    "votes": 3086
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "AVANT ADELANTE LOS VERDES",
+    "votes": 2674
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "SOM VALENCIANS EN MOVIMENT",
+    "votes": 2339
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 1540
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 1142
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "UNIDOS Actuando por la Democracia",
+    "votes": 1067
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 1009
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "CONTIGO SOMOS DEMOCRACIA",
+    "votes": 875
+  },
+  {
+    "district": "Val\u00e8ncia",
+    "party": "AUNA COMUNITAT VALENCIANA",
+    "votes": 468
+  },
+  {
+    "district": "Alacant",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 240202
+  },
+  { "district": "Alacant", "party": "PARTIDO POPULAR", "votes": 207310 },
+  { "district": "Alacant", "party": "VOX", "votes": 167395 },
+  { "district": "Alacant", "party": "UNIDAS PODEMOS", "votes": 108533 },
+  {
+    "district": "Alacant",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 69143
+  },
+  { "district": "Alacant", "party": "M\u00c9S COMPROM\u00cdS", "votes": 35612 },
+  {
+    "district": "Alacant",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 9417
+  },
+  {
+    "district": "Alacant",
+    "party": "ESQUERRA REPUBLICANA DEL PA\u00cdS VALENCI\u00c0",
+    "votes": 1683
+  },
+  {
+    "district": "Alacant",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 948
+  },
+  {
+    "district": "Alacant",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 911
+  },
+  { "district": "Alacant", "party": "RECORTES CERO-GRUPO VERDE", "votes": 891 },
+  { "district": "Alacant", "party": "PARTIDO LIBERTARIO", "votes": 556 },
+  {
+    "district": "Sevilla",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 380385
+  },
+  { "district": "Sevilla", "party": "VOX", "votes": 188813 },
+  { "district": "Sevilla", "party": "PARTIDO POPULAR", "votes": 188166 },
+  { "district": "Sevilla", "party": "UNIDAS PODEMOS", "votes": 153435 },
+  {
+    "district": "Sevilla",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 83575
+  },
+  {
+    "district": "Sevilla",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 12035
+  },
+  {
+    "district": "Sevilla",
+    "party": "ANDALUC\u00cdA POR S\u00cd",
+    "votes": 5183
+  },
+  {
+    "district": "Sevilla",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 1495
+  },
+  {
+    "district": "Sevilla",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 1456
+  },
+  {
+    "district": "Sevilla",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 1402
+  },
+  {
+    "district": "Sevilla",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 550
+  },
+  {
+    "district": "M\u00e1laga",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 226831
+  },
+  { "district": "M\u00e1laga", "party": "PARTIDO POPULAR", "votes": 163177 },
+  { "district": "M\u00e1laga", "party": "VOX", "votes": 162280 },
+  { "district": "M\u00e1laga", "party": "UNIDAS PODEMOS", "votes": 97801 },
+  {
+    "district": "M\u00e1laga",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 66995
+  },
+  {
+    "district": "M\u00e1laga",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 11089
+  },
+  {
+    "district": "M\u00e1laga",
+    "party": "ANDALUC\u00cdA POR S\u00cd",
+    "votes": 1686
+  },
+  {
+    "district": "M\u00e1laga",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 1265
+  },
+  {
+    "district": "M\u00e1laga",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 1261
+  },
+  {
+    "district": "M\u00e1laga",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 904
+  },
+  {
+    "district": "M\u00e1laga",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 381
+  },
+  { "district": "Murcia", "party": "VOX", "votes": 199829 },
+  { "district": "Murcia", "party": "PARTIDO POPULAR", "votes": 189500 },
+  {
+    "district": "Murcia",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 177154
+  },
+  { "district": "Murcia", "party": "UNIDAS PODEMOS", "votes": 63461 },
+  {
+    "district": "Murcia",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 53201
+  },
+  { "district": "Murcia", "party": "M\u00c1S PA\u00cdS-EQUO", "votes": 13439 },
+  {
+    "district": "Murcia",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 7005
+  },
+  { "district": "Murcia", "party": "SOMOS REGI\u00d3N", "votes": 2328 },
+  {
+    "district": "Murcia",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 990
+  },
+  { "district": "Murcia", "party": "RECORTES CERO-GRUPO VERDE", "votes": 881 },
+  {
+    "district": "Murcia",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 490
+  },
+  { "district": "Murcia", "party": "IZQUIERDA EN POSITIVO", "votes": 434 },
+  {
+    "district": "Murcia",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 431
+  },
+  { "district": "Murcia", "party": "CONTIGO SOMOS DEMOCRACIA", "votes": 317 },
+  { "district": "Murcia", "party": "DEMOCRACIA PLURAL", "votes": 214 },
+  {
+    "district": "C\u00e1diz",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 188271
+  },
+  { "district": "C\u00e1diz", "party": "VOX", "votes": 131205 },
+  { "district": "C\u00e1diz", "party": "PARTIDO POPULAR", "votes": 111089 },
+  { "district": "C\u00e1diz", "party": "UNIDAS PODEMOS", "votes": 93541 },
+  {
+    "district": "C\u00e1diz",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 55490
+  },
+  {
+    "district": "C\u00e1diz",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 8437
+  },
+  {
+    "district": "C\u00e1diz",
+    "party": "ANDALUC\u00cdA POR S\u00cd",
+    "votes": 3509
+  },
+  {
+    "district": "C\u00e1diz",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 1739
+  },
+  {
+    "district": "C\u00e1diz",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 915
+  },
+  {
+    "district": "C\u00e1diz",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 707
+  },
+  {
+    "district": "Illes Balears",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 115567
+  },
+  { "district": "Illes Balears", "party": "PARTIDO POPULAR", "votes": 103722 },
+  { "district": "Illes Balears", "party": "UNIDAS PODEMOS", "votes": 82225 },
+  { "district": "Illes Balears", "party": "VOX", "votes": 77520 },
+  {
+    "district": "Illes Balears",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 33451
+  },
+  { "district": "Illes Balears", "party": "M\u00c9S ESQUERRA", "votes": 18295 },
+  {
+    "district": "Illes Balears",
+    "party": "M\u00c1S PA\u00cdS",
+    "votes": 10652
+  },
+  {
+    "district": "Illes Balears",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 6207
+  },
+  {
+    "district": "Illes Balears",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 947
+  },
+  {
+    "district": "Illes Balears",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 573
+  },
+  { "district": "Illes Balears", "party": "PARTIDO LIBERTARIO", "votes": 372 },
+  { "district": "A Coru\u00f1a", "party": "PARTIDO POPULAR", "votes": 187127 },
+  {
+    "district": "A Coru\u00f1a",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 184178
+  },
+  {
+    "district": "A Coru\u00f1a",
+    "party": "EN COM\u00daN-UNIDAS PODEMOS",
+    "votes": 77069
+  },
+  {
+    "district": "A Coru\u00f1a",
+    "party": "BLOQUE NACIONALISTA GALEGO",
+    "votes": 58135
+  },
+  { "district": "A Coru\u00f1a", "party": "VOX", "votes": 50325 },
+  {
+    "district": "A Coru\u00f1a",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 28469
+  },
+  {
+    "district": "A Coru\u00f1a",
+    "party": "M\u00c1S PA\u00cdS-EQUO",
+    "votes": 12619
+  },
+  {
+    "district": "A Coru\u00f1a",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 4572
+  },
+  {
+    "district": "A Coru\u00f1a",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 1689
+  },
+  {
+    "district": "A Coru\u00f1a",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 925
+  },
+  {
+    "district": "A Coru\u00f1a",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 472
+  },
+  {
+    "district": "Las Palmas",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 141078
+  },
+  { "district": "Las Palmas", "party": "PARTIDO POPULAR", "votes": 103375 },
+  { "district": "Las Palmas", "party": "UNIDAS PODEMOS", "votes": 74648 },
+  { "district": "Las Palmas", "party": "VOX", "votes": 64515 },
+  {
+    "district": "Las Palmas",
+    "party": "COALICI\u00d3N CANARIA-NUEVA CANARIAS",
+    "votes": 48028
+  },
+  {
+    "district": "Las Palmas",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 28018
+  },
+  {
+    "district": "Las Palmas",
+    "party": "M\u00c1S PA\u00cdS-EQUO",
+    "votes": 8389
+  },
+  {
+    "district": "Las Palmas",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 5796
+  },
+  { "district": "Las Palmas", "party": "LOS VERDES", "votes": 1864 },
+  {
+    "district": "Las Palmas",
+    "party": "AHORA CANARIAS: Alternativa Nacionalista Canaria (ANC) y Unidad del Pueblo",
+    "votes": 1110
+  },
+  {
+    "district": "Las Palmas",
+    "party": "PARTIDO DEM\u00d3CRATA SOCIAL JUBILADOS EUROPEOS",
+    "votes": 713
+  },
+  {
+    "district": "Las Palmas",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 552
+  },
+  {
+    "district": "Las Palmas",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 505
+  },
+  {
+    "district": "Las Palmas",
+    "party": "CONTIGO SOMOS DEMOCRACIA",
+    "votes": 358
+  },
+  { "district": "Las Palmas", "party": "PARTIDO HUMANISTA", "votes": 276 },
+  {
+    "district": "Bizkaia",
+    "party": "EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO",
+    "votes": 221979
+  },
+  {
+    "district": "Bizkaia",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 120566
+  },
+  { "district": "Bizkaia", "party": "UNIDAS PODEMOS", "votes": 97125 },
+  { "district": "Bizkaia", "party": "EUSKAL HERRIA BILDU", "votes": 94669 },
+  { "district": "Bizkaia", "party": "PARTIDO POPULAR", "votes": 55621 },
+  { "district": "Bizkaia", "party": "VOX", "votes": 15284 },
+  { "district": "Bizkaia", "party": "M\u00c1S PA\u00cdS", "votes": 8542 },
+  {
+    "district": "Bizkaia",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 6929
+  },
+  {
+    "district": "Bizkaia",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 3783
+  },
+  { "district": "Bizkaia", "party": "RECORTES CERO-GRUPO VERDE", "votes": 753 },
+  {
+    "district": "Bizkaia",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 491
+  },
+  {
+    "district": "Bizkaia",
+    "party": "PARTIDO DE ACCI\u00d3N SOLIDARIA EUROPEA",
+    "votes": 270
+  },
+  {
+    "district": "Asturias",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 186211
+  },
+  { "district": "Asturias", "party": "PARTIDO POPULAR", "votes": 129945 },
+  { "district": "Asturias", "party": "UNIDAS PODEMOS", "votes": 89301 },
+  { "district": "Asturias", "party": "VOX", "votes": 88788 },
+  {
+    "district": "Asturias",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 37374
+  },
+  {
+    "district": "Asturias",
+    "party": "M\u00c1S PA\u00cdS-EQUO",
+    "votes": 12732
+  },
+  {
+    "district": "Asturias",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 4412
+  },
+  { "district": "Asturias", "party": "ANDECHA ASTUR", "votes": 887 },
+  {
+    "district": "Asturias",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 843
+  },
+  {
+    "district": "Asturias",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 732
+  },
+  {
+    "district": "Asturias",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 626
+  },
+  {
+    "district": "Asturias",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 487
+  },
+  { "district": "Asturias", "party": "PARTIDO HUMANISTA", "votes": 366 },
+  {
+    "district": "Granada",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 160190
+  },
+  { "district": "Granada", "party": "PARTIDO POPULAR", "votes": 105192 },
+  { "district": "Granada", "party": "VOX", "votes": 99928 },
+  { "district": "Granada", "party": "UNIDAS PODEMOS", "votes": 59331 },
+  {
+    "district": "Granada",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 37772
+  },
+  {
+    "district": "Granada",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 4095
+  },
+  {
+    "district": "Granada",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 624
+  },
+  {
+    "district": "Granada",
+    "party": "ANDALUC\u00cdA POR S\u00cd",
+    "votes": 619
+  },
+  { "district": "Granada", "party": "RECORTES CERO-GRUPO VERDE", "votes": 545 },
+  { "district": "Granada", "party": "CONVERGENCIA ANDALUZA", "votes": 520 },
+  {
+    "district": "Granada",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 322
+  },
+  {
+    "district": "Granada",
+    "party": "IZQUIERDA ANTICAPITALISTA REVOLUCIONARIA",
+    "votes": 113
+  },
+  {
+    "district": "Pontevedra",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 166377
+  },
+  { "district": "Pontevedra", "party": "PARTIDO POPULAR", "votes": 151961 },
+  {
+    "district": "Pontevedra",
+    "party": "EN COM\u00daN-UNIDAS PODEMOS",
+    "votes": 81041
+  },
+  {
+    "district": "Pontevedra",
+    "party": "BLOQUE NACIONALISTA GALEGO",
+    "votes": 39125
+  },
+  { "district": "Pontevedra", "party": "VOX", "votes": 38119 },
+  {
+    "district": "Pontevedra",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 23984
+  },
+  {
+    "district": "Pontevedra",
+    "party": "M\u00c1S PA\u00cdS-EQUO",
+    "votes": 10207
+  },
+  {
+    "district": "Pontevedra",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 4619
+  },
+  {
+    "district": "Pontevedra",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 790
+  },
+  {
+    "district": "Pontevedra",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 493
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 132518
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "PARTIDO POPULAR",
+    "votes": 93434
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "COALICI\u00d3N CANARIA-NUEVA CANARIAS",
+    "votes": 76261
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "UNIDAS PODEMOS",
+    "votes": 64613
+  },
+  { "district": "Santa Cruz de Tenerife", "party": "VOX", "votes": 53491 },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 22979
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "M\u00c1S PA\u00cdS-EQUO",
+    "votes": 6583
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 6150
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "LOS VERDES",
+    "votes": 1322
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "AHORA CANARIAS: Alternativa Nacionalista Canaria (ANC) y Unidad del Pueblo",
+    "votes": 922
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 489
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "ESCA\u00d1OS EN BLANCO",
+    "votes": 418
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 319
+  },
+  {
+    "district": "Santa Cruz de Tenerife",
+    "party": "CONTIGO SOMOS DEMOCRACIA",
+    "votes": 236
+  },
+  {
+    "district": "Zaragoza",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 158326
+  },
+  { "district": "Zaragoza", "party": "PARTIDO POPULAR", "votes": 119909 },
+  { "district": "Zaragoza", "party": "VOX", "votes": 92353 },
+  { "district": "Zaragoza", "party": "UNIDAS PODEMOS", "votes": 57875 },
+  {
+    "district": "Zaragoza",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 47001
+  },
+  {
+    "district": "Zaragoza",
+    "party": "M\u00c1S PA\u00cdS-CHUNTA ARAGONESISTA-EQUO",
+    "votes": 23196
+  },
+  {
+    "district": "Zaragoza",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 3618
+  },
+  { "district": "Zaragoza", "party": "ESCA\u00d1OS EN BLANCO", "votes": 1940 },
+  {
+    "district": "Zaragoza",
+    "party": "MOVIMIENTO ARAGONES SOCIAL",
+    "votes": 1068
+  },
+  {
+    "district": "Zaragoza",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 861
+  },
+  { "district": "Zaragoza", "party": "PUYALON", "votes": 532 },
+  {
+    "district": "Zaragoza",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 485
+  },
+  {
+    "district": "Zaragoza",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 414
+  },
+  {
+    "district": "Zaragoza",
+    "party": "FEDERACI\u00d3N DE LOS INDEPENDIENTES DE ARAG\u00d3N",
+    "votes": 386
+  },
+  {
+    "district": "Zaragoza",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 331
+  },
+  {
+    "district": "Almer\u00eda",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 89295
+  },
+  { "district": "Almer\u00eda", "party": "VOX", "votes": 80714 },
+  { "district": "Almer\u00eda", "party": "PARTIDO POPULAR", "votes": 78072 },
+  { "district": "Almer\u00eda", "party": "UNIDAS PODEMOS", "votes": 24400 },
+  {
+    "district": "Almer\u00eda",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 22835
+  },
+  {
+    "district": "Almer\u00eda",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 2582
+  },
+  {
+    "district": "Almer\u00eda",
+    "party": "ESCA\u00d1OS EN BLANCO",
+    "votes": 513
+  },
+  {
+    "district": "Almer\u00eda",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 371
+  },
+  {
+    "district": "Almer\u00eda",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 360
+  },
+  {
+    "district": "Almer\u00eda",
+    "party": "ANDALUC\u00cdA POR S\u00cd",
+    "votes": 318
+  },
+  {
+    "district": "Badajoz",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 142312
+  },
+  { "district": "Badajoz", "party": "PARTIDO POPULAR", "votes": 92742 },
+  { "district": "Badajoz", "party": "VOX", "votes": 64016 },
+  { "district": "Badajoz", "party": "UNIDAS PODEMOS", "votes": 33971 },
+  {
+    "district": "Badajoz",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 29520
+  },
+  {
+    "district": "Badajoz",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 2400
+  },
+  {
+    "district": "Badajoz",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 925
+  },
+  { "district": "Badajoz", "party": "RECORTES CERO-GRUPO VERDE", "votes": 674 },
+  {
+    "district": "C\u00f3rdoba",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 146761
+  },
+  { "district": "C\u00f3rdoba", "party": "PARTIDO POPULAR", "votes": 99999 },
+  { "district": "C\u00f3rdoba", "party": "VOX", "votes": 82534 },
+  { "district": "C\u00f3rdoba", "party": "UNIDAS PODEMOS", "votes": 64769 },
+  {
+    "district": "C\u00f3rdoba",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 36229
+  },
+  {
+    "district": "C\u00f3rdoba",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 3946
+  },
+  {
+    "district": "C\u00f3rdoba",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 1062
+  },
+  {
+    "district": "C\u00f3rdoba",
+    "party": "ANDALUC\u00cdA POR S\u00cd",
+    "votes": 1019
+  },
+  {
+    "district": "C\u00f3rdoba",
+    "party": "ESCA\u00d1OS EN BLANCO",
+    "votes": 760
+  },
+  {
+    "district": "C\u00f3rdoba",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 549
+  },
+  {
+    "district": "C\u00f3rdoba",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 478
+  },
+  {
+    "district": "C\u00f3rdoba",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 321
+  },
+  {
+    "district": "Girona",
+    "party": "ESQUERRA REPUBLICANA DE CATALUNYA-SOBIRANISTES",
+    "votes": 91932
+  },
+  {
+    "district": "Girona",
+    "party": "JUNTS PER CATALUNYA-JUNTS",
+    "votes": 88060
+  },
+  {
+    "district": "Girona",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 52723
+  },
+  {
+    "district": "Girona",
+    "party": "EN COM\u00da PODEM-GUANYEM EL CANVI",
+    "votes": 33710
+  },
+  {
+    "district": "Girona",
+    "party": "CANDIDATURA D'UNITAT POPULAR-PER LA RUPTURA",
+    "votes": 31703
+  },
+  { "district": "Girona", "party": "VOX", "votes": 18489 },
+  { "district": "Girona", "party": "PARTIDO POPULAR", "votes": 17449 },
+  {
+    "district": "Girona",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 13869
+  },
+  {
+    "district": "Girona",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 3724
+  },
+  { "district": "Girona", "party": "RECORTES CERO-GRUPO VERDE", "votes": 508 },
+  {
+    "district": "Girona",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 327
+  },
+  { "district": "Girona", "party": "IZQUIERDA EN POSITIVO", "votes": 246 },
+  {
+    "district": "Gipuzkoa",
+    "party": "EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO",
+    "votes": 116761
+  },
+  { "district": "Gipuzkoa", "party": "EUSKAL HERRIA BILDU", "votes": 98951 },
+  {
+    "district": "Gipuzkoa",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 69342
+  },
+  { "district": "Gipuzkoa", "party": "UNIDAS PODEMOS", "votes": 57363 },
+  { "district": "Gipuzkoa", "party": "PARTIDO POPULAR", "votes": 23619 },
+  { "district": "Gipuzkoa", "party": "VOX", "votes": 7274 },
+  {
+    "district": "Gipuzkoa",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 3824
+  },
+  {
+    "district": "Gipuzkoa",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 2070
+  },
+  {
+    "district": "Gipuzkoa",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 510
+  },
+  {
+    "district": "Gipuzkoa",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 276
+  },
+  {
+    "district": "Tarragona",
+    "party": "ESQUERRA REPUBLICANA DE CATALUNYA-SOBIRANISTES",
+    "votes": 98782
+  },
+  {
+    "district": "Tarragona",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 73641
+  },
+  {
+    "district": "Tarragona",
+    "party": "JUNTS PER CATALUNYA-JUNTS",
+    "votes": 51461
+  },
+  {
+    "district": "Tarragona",
+    "party": "EN COM\u00da PODEM-GUANYEM EL CANVI",
+    "votes": 46644
+  },
+  { "district": "Tarragona", "party": "VOX", "votes": 31124 },
+  { "district": "Tarragona", "party": "PARTIDO POPULAR", "votes": 29923 },
+  {
+    "district": "Tarragona",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 22814
+  },
+  {
+    "district": "Tarragona",
+    "party": "CANDIDATURA D'UNITAT POPULAR-PER LA RUPTURA",
+    "votes": 22129
+  },
+  {
+    "district": "Tarragona",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 4588
+  },
+  {
+    "district": "Tarragona",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 533
+  },
+  { "district": "Tarragona", "party": "IZQUIERDA EN POSITIVO", "votes": 343 },
+  {
+    "district": "Toledo",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 116282
+  },
+  { "district": "Toledo", "party": "PARTIDO POPULAR", "votes": 94378 },
+  { "district": "Toledo", "party": "VOX", "votes": 86049 },
+  { "district": "Toledo", "party": "UNIDAS PODEMOS", "votes": 34837 },
+  {
+    "district": "Toledo",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 24871
+  },
+  {
+    "district": "Toledo",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 2680
+  },
+  {
+    "district": "Toledo",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 661
+  },
+  { "district": "Toledo", "party": "RECORTES CERO-GRUPO VERDE", "votes": 556 },
+  {
+    "district": "Toledo",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 282
+  },
+  {
+    "district": "Toledo",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 217
+  },
+  { "district": "Cantabria", "party": "PARTIDO POPULAR", "votes": 84583 },
+  {
+    "district": "Cantabria",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 76028
+  },
+  {
+    "district": "Cantabria",
+    "party": "PARTIDO REGIONALISTA DE CANTABRIA",
+    "votes": 68830
+  },
+  { "district": "Cantabria", "party": "VOX", "votes": 48827 },
+  { "district": "Cantabria", "party": "UNIDAS PODEMOS", "votes": 28376 },
+  {
+    "district": "Cantabria",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 15609
+  },
+  {
+    "district": "Cantabria",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1856
+  },
+  {
+    "district": "Cantabria",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 262
+  },
+  { "district": "Cantabria", "party": "ESCA\u00d1OS EN BLANCO", "votes": 259 },
+  {
+    "district": "Cantabria",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 247
+  },
+  {
+    "district": "Cantabria",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 232
+  },
+  {
+    "district": "Cantabria",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 187
+  },
+  { "district": "Cantabria", "party": "PARTIDO LIBERTARIO", "votes": 126 },
+  {
+    "district": "Castell\u00f3",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 84078
+  },
+  { "district": "Castell\u00f3", "party": "PARTIDO POPULAR", "votes": 70176 },
+  { "district": "Castell\u00f3", "party": "VOX", "votes": 54849 },
+  { "district": "Castell\u00f3", "party": "UNIDAS PODEMOS", "votes": 39251 },
+  {
+    "district": "Castell\u00f3",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 20302
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "M\u00c9S COMPROM\u00cdS",
+    "votes": 18140
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 2483
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "ESQUERRA REPUBLICANA DEL PA\u00cdS VALENCI\u00c0",
+    "votes": 1106
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "AVANT ADELANTE LOS VERDES",
+    "votes": 405
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 379
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 370
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 257
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 194
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "FALANGE ESPA\u00d1OLA DE LAS JONS",
+    "votes": 137
+  },
+  {
+    "district": "Castell\u00f3",
+    "party": "AUNA COMUNITAT VALENCIANA",
+    "votes": 104
+  },
+  {
+    "district": "Ciudad Real",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 92046
+  },
+  { "district": "Ciudad Real", "party": "PARTIDO POPULAR", "votes": 74835 },
+  { "district": "Ciudad Real", "party": "VOX", "votes": 56050 },
+  { "district": "Ciudad Real", "party": "UNIDAS PODEMOS", "votes": 22250 },
+  {
+    "district": "Ciudad Real",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 18337
+  },
+  {
+    "district": "Ciudad Real",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1788
+  },
+  {
+    "district": "Ciudad Real",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 484
+  },
+  {
+    "district": "Ciudad Real",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 447
+  },
+  {
+    "district": "Huelva",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 91656
+  },
+  { "district": "Huelva", "party": "VOX", "votes": 52485 },
+  { "district": "Huelva", "party": "PARTIDO POPULAR", "votes": 49452 },
+  { "district": "Huelva", "party": "UNIDAS PODEMOS", "votes": 30389 },
+  {
+    "district": "Huelva",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 18382
+  },
+  {
+    "district": "Huelva",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 2535
+  },
+  { "district": "Huelva", "party": "ANDALUC\u00cdA POR S\u00cd", "votes": 856 },
+  { "district": "Huelva", "party": "RECORTES CERO-GRUPO VERDE", "votes": 495 },
+  {
+    "district": "Huelva",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 464
+  },
+  {
+    "district": "Huelva",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 351
+  },
+  {
+    "district": "Huelva",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 112
+  },
+  {
+    "district": "Ja\u00e9n",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 141737
+  },
+  { "district": "Ja\u00e9n", "party": "PARTIDO POPULAR", "votes": 82055 },
+  { "district": "Ja\u00e9n", "party": "VOX", "votes": 71950 },
+  { "district": "Ja\u00e9n", "party": "UNIDAS PODEMOS", "votes": 35962 },
+  {
+    "district": "Ja\u00e9n",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 24816
+  },
+  {
+    "district": "Ja\u00e9n",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 2766
+  },
+  {
+    "district": "Ja\u00e9n",
+    "party": "ANDALUC\u00cdA POR S\u00cd",
+    "votes": 856
+  },
+  {
+    "district": "Ja\u00e9n",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 471
+  },
+  {
+    "district": "Ja\u00e9n",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 464
+  },
+  {
+    "district": "Ja\u00e9n",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 419
+  },
+  {
+    "district": "Ja\u00e9n",
+    "party": "PARTIDO REPUBLICANO INDEPENDIENTE SOLIDARIO ANDALUZ",
+    "votes": 249
+  },
+  { "district": "Navarra", "party": "NAVARRA SUMA", "votes": 99078 },
+  {
+    "district": "Navarra",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 83734
+  },
+  { "district": "Navarra", "party": "EUSKAL HERRIA BILDU", "votes": 56548 },
+  { "district": "Navarra", "party": "UNIDAS PODEMOS", "votes": 55498 },
+  { "district": "Navarra", "party": "VOX", "votes": 19440 },
+  { "district": "Navarra", "party": "GEROA BAI", "votes": 12709 },
+  {
+    "district": "Navarra",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 2250
+  },
+  { "district": "Navarra", "party": "RECORTES CERO-GRUPO VERDE", "votes": 965 },
+  {
+    "district": "Navarra",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 381
+  },
+  {
+    "district": "Valladolid",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 94384
+  },
+  { "district": "Valladolid", "party": "PARTIDO POPULAR", "votes": 91857 },
+  { "district": "Valladolid", "party": "VOX", "votes": 56353 },
+  { "district": "Valladolid", "party": "UNIDAS PODEMOS", "votes": 34313 },
+  {
+    "district": "Valladolid",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 26947
+  },
+  {
+    "district": "Valladolid",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 2088
+  },
+  {
+    "district": "Valladolid",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 594
+  },
+  {
+    "district": "Valladolid",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 586
+  },
+  {
+    "district": "Valladolid",
+    "party": "UNI\u00d3N REGIONALISTA DE CASTILLA Y LE\u00d3N",
+    "votes": 530
+  },
+  {
+    "district": "Valladolid",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 281
+  },
+  {
+    "district": "Valladolid",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 223
+  },
+  {
+    "district": "Valladolid",
+    "party": "FALANGE ESPA\u00d1OLA DE LAS JONS",
+    "votes": 151
+  },
+  {
+    "district": "Araba",
+    "party": "EUZKO ALDERDI JELTZALEA-PARTIDO NACIONALISTA VASCO",
+    "votes": 40262
+  },
+  {
+    "district": "Araba",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 37488
+  },
+  { "district": "Araba", "party": "UNIDAS PODEMOS", "votes": 28186 },
+  { "district": "Araba", "party": "EUSKAL HERRIA BILDU", "votes": 27453 },
+  { "district": "Araba", "party": "PARTIDO POPULAR", "votes": 25506 },
+  { "district": "Araba", "party": "VOX", "votes": 6421 },
+  {
+    "district": "Araba",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 2526
+  },
+  {
+    "district": "Araba",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1152
+  },
+  { "district": "Araba", "party": "RECORTES CERO-GRUPO VERDE", "votes": 409 },
+  {
+    "district": "Araba",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 215
+  },
+  {
+    "district": "Albacete",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 69848
+  },
+  { "district": "Albacete", "party": "PARTIDO POPULAR", "votes": 58835 },
+  { "district": "Albacete", "party": "VOX", "votes": 44306 },
+  { "district": "Albacete", "party": "UNIDAS PODEMOS", "votes": 20771 },
+  {
+    "district": "Albacete",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 15947
+  },
+  {
+    "district": "Albacete",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1651
+  },
+  {
+    "district": "Albacete",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 375
+  },
+  {
+    "district": "Albacete",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 222
+  },
+  {
+    "district": "Albacete",
+    "party": "PARTIDO DEM\u00d3CRATA SOCIAL JUBILADOS EUROPEOS",
+    "votes": 197
+  },
+  {
+    "district": "Albacete",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 177
+  },
+  {
+    "district": "Albacete",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 153
+  },
+  {
+    "district": "Burgos",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 64182
+  },
+  { "district": "Burgos", "party": "PARTIDO POPULAR", "votes": 61228 },
+  { "district": "Burgos", "party": "VOX", "votes": 29579 },
+  { "district": "Burgos", "party": "UNIDAS PODEMOS", "votes": 22058 },
+  {
+    "district": "Burgos",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 16214
+  },
+  {
+    "district": "Burgos",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1415
+  },
+  { "district": "Burgos", "party": "RECORTES CERO-GRUPO VERDE", "votes": 645 },
+  {
+    "district": "Burgos",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 620
+  },
+  {
+    "district": "Burgos",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 404
+  },
+  {
+    "district": "C\u00e1ceres",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 85135
+  },
+  { "district": "C\u00e1ceres", "party": "PARTIDO POPULAR", "votes": 61527 },
+  { "district": "C\u00e1ceres", "party": "VOX", "votes": 35807 },
+  { "district": "C\u00e1ceres", "party": "UNIDAS PODEMOS", "votes": 20101 },
+  {
+    "district": "C\u00e1ceres",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 15533
+  },
+  { "district": "C\u00e1ceres", "party": "EXTREMADURA UNIDA", "votes": 1347 },
+  {
+    "district": "C\u00e1ceres",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1276
+  },
+  {
+    "district": "C\u00e1ceres",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 342
+  },
+  {
+    "district": "C\u00e1ceres",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 295
+  },
+  {
+    "district": "Le\u00f3n",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 87896
+  },
+  { "district": "Le\u00f3n", "party": "PARTIDO POPULAR", "votes": 74672 },
+  { "district": "Le\u00f3n", "party": "VOX", "votes": 40884 },
+  { "district": "Le\u00f3n", "party": "UNIDAS PODEMOS", "votes": 27478 },
+  {
+    "district": "Le\u00f3n",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 16731
+  },
+  {
+    "district": "Le\u00f3n",
+    "party": "UNI\u00d3N DEL PUEBLO LEON\u00c9S",
+    "votes": 9588
+  },
+  {
+    "district": "Le\u00f3n",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1505
+  },
+  {
+    "district": "Le\u00f3n",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 379
+  },
+  {
+    "district": "Le\u00f3n",
+    "party": "PARTIDO REGIONALISTA DEL PA\u00cdS LEON\u00c9S",
+    "votes": 341
+  },
+  {
+    "district": "Le\u00f3n",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 317
+  },
+  {
+    "district": "Le\u00f3n",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 178
+  },
+  {
+    "district": "Lleida",
+    "party": "ESQUERRA REPUBLICANA DE CATALUNYA-SOBIRANISTES",
+    "votes": 65236
+  },
+  {
+    "district": "Lleida",
+    "party": "JUNTS PER CATALUNYA-JUNTS",
+    "votes": 46773
+  },
+  {
+    "district": "Lleida",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 29983
+  },
+  {
+    "district": "Lleida",
+    "party": "EN COM\u00da PODEM-GUANYEM EL CANVI",
+    "votes": 16337
+  },
+  { "district": "Lleida", "party": "PARTIDO POPULAR", "votes": 14697 },
+  {
+    "district": "Lleida",
+    "party": "CANDIDATURA D'UNITAT POPULAR-PER LA RUPTURA",
+    "votes": 14098
+  },
+  { "district": "Lleida", "party": "VOX", "votes": 9312 },
+  {
+    "district": "Lleida",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 7128
+  },
+  {
+    "district": "Lleida",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1521
+  },
+  { "district": "Lleida", "party": "RECORTES CERO-GRUPO VERDE", "votes": 183 },
+  {
+    "district": "Lleida",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 129
+  },
+  { "district": "Lleida", "party": "IZQUIERDA EN POSITIVO", "votes": 124 },
+  { "district": "Lugo", "party": "PARTIDO POPULAR", "votes": 68530 },
+  {
+    "district": "Lugo",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 57537
+  },
+  {
+    "district": "Lugo",
+    "party": "EN COM\u00daN-UNIDAS PODEMOS",
+    "votes": 16548
+  },
+  { "district": "Lugo", "party": "VOX", "votes": 14652 },
+  { "district": "Lugo", "party": "BLOQUE NACIONALISTA GALEGO", "votes": 12940 },
+  {
+    "district": "Lugo",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 5811
+  },
+  {
+    "district": "Lugo",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1190
+  },
+  { "district": "Lugo", "party": "RECORTES CERO-GRUPO VERDE", "votes": 237 },
+  {
+    "district": "Lugo",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 178
+  },
+  {
+    "district": "Lugo",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 135
+  },
+  { "district": "Lugo", "party": "CONVERXENCIA 21", "votes": 72 },
+  { "district": "Ourense", "party": "PARTIDO POPULAR", "votes": 67580 },
+  {
+    "district": "Ourense",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 56934
+  },
+  {
+    "district": "Ourense",
+    "party": "EN COM\u00daN-UNIDAS PODEMOS",
+    "votes": 13573
+  },
+  { "district": "Ourense", "party": "VOX", "votes": 13285 },
+  {
+    "district": "Ourense",
+    "party": "BLOQUE NACIONALISTA GALEGO",
+    "votes": 10256
+  },
+  {
+    "district": "Ourense",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 6397
+  },
+  {
+    "district": "Ourense",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1094
+  },
+  { "district": "Ourense", "party": "RECORTES CERO-GRUPO VERDE", "votes": 221 },
+  {
+    "district": "Ourense",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 158
+  },
+  {
+    "district": "La Rioja",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 57485
+  },
+  { "district": "La Rioja", "party": "PARTIDO POPULAR", "votes": 56450 },
+  { "district": "La Rioja", "party": "VOX", "votes": 18908 },
+  { "district": "La Rioja", "party": "UNIDAS PODEMOS", "votes": 16273 },
+  {
+    "district": "La Rioja",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 11673
+  },
+  {
+    "district": "La Rioja",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1096
+  },
+  { "district": "La Rioja", "party": "ESCA\u00d1OS EN BLANCO", "votes": 425 },
+  {
+    "district": "La Rioja",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 307
+  },
+  {
+    "district": "La Rioja",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 297
+  },
+  {
+    "district": "La Rioja",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 263
+  },
+  { "district": "Salamanca", "party": "PARTIDO POPULAR", "votes": 67715 },
+  {
+    "district": "Salamanca",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 57481
+  },
+  { "district": "Salamanca", "party": "VOX", "votes": 34929 },
+  {
+    "district": "Salamanca",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 16886
+  },
+  { "district": "Salamanca", "party": "UNIDAS PODEMOS", "votes": 13608 },
+  {
+    "district": "Salamanca",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 964
+  },
+  {
+    "district": "Salamanca",
+    "party": "PARTIDO REGIONALISTA DEL PA\u00cdS LEON\u00c9S",
+    "votes": 322
+  },
+  {
+    "district": "Salamanca",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 306
+  },
+  {
+    "district": "Salamanca",
+    "party": "UNI\u00d3N DEL PUEBLO LEON\u00c9S",
+    "votes": 286
+  },
+  {
+    "district": "Salamanca",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 266
+  },
+  {
+    "district": "Salamanca",
+    "party": "CONTIGO SOMOS DEMOCRACIA",
+    "votes": 229
+  },
+  {
+    "district": "Salamanca",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 196
+  },
+  { "district": "\u00c1vila", "party": "PARTIDO POPULAR", "votes": 32527 },
+  {
+    "district": "\u00c1vila",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 24474
+  },
+  { "district": "\u00c1vila", "party": "VOX", "votes": 17313 },
+  {
+    "district": "\u00c1vila",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 6119
+  },
+  { "district": "\u00c1vila", "party": "UNIDAS PODEMOS", "votes": 6059 },
+  { "district": "\u00c1vila", "party": "POR \u00c1VILA", "votes": 5416 },
+  {
+    "district": "\u00c1vila",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 432
+  },
+  {
+    "district": "\u00c1vila",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 105
+  },
+  {
+    "district": "\u00c1vila",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 102
+  },
+  {
+    "district": "\u00c1vila",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 101
+  },
+  {
+    "district": "\u00c1vila",
+    "party": "FALANGE ESPA\u00d1OLA DE LAS JONS",
+    "votes": 61
+  },
+  { "district": "\u00c1vila", "party": "PARTIDO LIBERTARIO", "votes": 32 },
+  {
+    "district": "Cuenca",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 40670
+  },
+  { "district": "Cuenca", "party": "PARTIDO POPULAR", "votes": 33721 },
+  { "district": "Cuenca", "party": "VOX", "votes": 20108 },
+  { "district": "Cuenca", "party": "UNIDAS PODEMOS", "votes": 7529 },
+  {
+    "district": "Cuenca",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 5094
+  },
+  {
+    "district": "Cuenca",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 545
+  },
+  {
+    "district": "Cuenca",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 129
+  },
+  { "district": "Cuenca", "party": "RECORTES CERO-GRUPO VERDE", "votes": 125 },
+  {
+    "district": "Cuenca",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 83
+  },
+  {
+    "district": "Cuenca",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 66
+  },
+  { "district": "Cuenca", "party": "PARTIDO LIBERTARIO", "votes": 47 },
+  {
+    "district": "Guadalajara",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 41167
+  },
+  { "district": "Guadalajara", "party": "VOX", "votes": 31683 },
+  { "district": "Guadalajara", "party": "PARTIDO POPULAR", "votes": 30443 },
+  { "district": "Guadalajara", "party": "UNIDAS PODEMOS", "votes": 14897 },
+  {
+    "district": "Guadalajara",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 10169
+  },
+  {
+    "district": "Guadalajara",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 1266
+  },
+  {
+    "district": "Guadalajara",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 287
+  },
+  {
+    "district": "Guadalajara",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 284
+  },
+  {
+    "district": "Guadalajara",
+    "party": "PARTIDO DEM\u00d3CRATA SOCIAL JUBILADOS EUROPEOS",
+    "votes": 234
+  },
+  {
+    "district": "Guadalajara",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 195
+  },
+  {
+    "district": "Guadalajara",
+    "party": "FALANGE ESPA\u00d1OLA DE LAS JONS",
+    "votes": 188
+  },
+  {
+    "district": "Guadalajara",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 106
+  },
+  {
+    "district": "Guadalajara",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 87
+  },
+  {
+    "district": "Huesca",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 38101
+  },
+  { "district": "Huesca", "party": "PARTIDO POPULAR", "votes": 29804 },
+  { "district": "Huesca", "party": "VOX", "votes": 17237 },
+  {
+    "district": "Huesca",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 9244
+  },
+  { "district": "Huesca", "party": "CHUNTA ARAGONESISTA", "votes": 2000 },
+  {
+    "district": "Huesca",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 735
+  },
+  { "district": "Huesca", "party": "ESCA\u00d1OS EN BLANCO", "votes": 393 },
+  { "district": "Huesca", "party": "RECORTES CERO-GRUPO VERDE", "votes": 198 },
+  {
+    "district": "Huesca",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 153
+  },
+  {
+    "district": "Huesca",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 100
+  },
+  {
+    "district": "Huesca",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 86
+  },
+  {
+    "district": "Huesca",
+    "party": "FEDERACI\u00d3N DE LOS INDEPENDIENTES DE ARAG\u00d3N",
+    "votes": 75
+  },
+  { "district": "Huesca", "party": "PUYALON", "votes": 73 },
+  { "district": "Palencia", "party": "PARTIDO POPULAR", "votes": 34195 },
+  {
+    "district": "Palencia",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 31847
+  },
+  { "district": "Palencia", "party": "VOX", "votes": 13816 },
+  { "district": "Palencia", "party": "UNIDAS PODEMOS", "votes": 7746 },
+  {
+    "district": "Palencia",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 5937
+  },
+  {
+    "district": "Palencia",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 582
+  },
+  {
+    "district": "Palencia",
+    "party": "RECORTES CERO-GRUPO VERDE",
+    "votes": 256
+  },
+  {
+    "district": "Palencia",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 209
+  },
+  {
+    "district": "Palencia",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 106
+  },
+  {
+    "district": "Palencia",
+    "party": "FALANGE ESPA\u00d1OLA DE LAS JONS",
+    "votes": 79
+  },
+  { "district": "Segovia", "party": "PARTIDO POPULAR", "votes": 28057 },
+  {
+    "district": "Segovia",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 25233
+  },
+  { "district": "Segovia", "party": "VOX", "votes": 14569 },
+  { "district": "Segovia", "party": "UNIDAS PODEMOS", "votes": 7901 },
+  {
+    "district": "Segovia",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 6861
+  },
+  {
+    "district": "Segovia",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 462
+  },
+  { "district": "Segovia", "party": "CENTRADOS", "votes": 234 },
+  { "district": "Segovia", "party": "RECORTES CERO-GRUPO VERDE", "votes": 191 },
+  {
+    "district": "Segovia",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 173
+  },
+  {
+    "district": "Segovia",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 133
+  },
+  {
+    "district": "Segovia",
+    "party": "PARTIDO DEM\u00d3CRATA SOCIAL JUBILADOS EUROPEOS",
+    "votes": 115
+  },
+  {
+    "district": "Segovia",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 67
+  },
+  { "district": "Segovia", "party": "PARTIDO LIBERTARIO", "votes": 38 },
+  {
+    "district": "Teruel",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 18934
+  },
+  { "district": "Teruel", "party": "PARTIDO POPULAR", "votes": 17520 },
+  { "district": "Teruel", "party": "VOX", "votes": 9346 },
+  { "district": "Teruel", "party": "UNIDAS PODEMOS", "votes": 3982 },
+  {
+    "district": "Teruel",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 3732
+  },
+  {
+    "district": "Teruel",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 212
+  },
+  {
+    "district": "Teruel",
+    "party": "PARTIDO COMUNISTA OBRERO ESPA\u00d1OL",
+    "votes": 96
+  },
+  {
+    "district": "Teruel",
+    "party": "PARTIDO COMUNISTA DE LOS PUEBLOS DE ESPA\u00d1A",
+    "votes": 45
+  },
+  { "district": "Teruel", "party": "POR UN MUNDO M\u00c1S JUSTO", "votes": 35 },
+  { "district": "Teruel", "party": "UNI\u00d3N DE TODOS", "votes": 26 },
+  { "district": "Teruel", "party": "PUYALON", "votes": 25 },
+  { "district": "Teruel", "party": "AUNA COMUNITAT VALENCIANA", "votes": 13 },
+  { "district": "Teruel", "party": "RECORTES CERO-GRUPO VERDE", "votes": 0 },
+  {
+    "district": "Teruel",
+    "party": "AGRUPACI\u00d3N DE ELECTORES TERUEL EXISTE",
+    "votes": 19761
+  },
+  { "district": "Zamora", "party": "PARTIDO POPULAR", "votes": 33495 },
+  {
+    "district": "Zamora",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 32747
+  },
+  { "district": "Zamora", "party": "VOX", "votes": 17036 },
+  { "district": "Zamora", "party": "UNIDAS PODEMOS", "votes": 7001 },
+  {
+    "district": "Zamora",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 6835
+  },
+  {
+    "district": "Zamora",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 432
+  },
+  {
+    "district": "Zamora",
+    "party": "UNI\u00d3N DEL PUEBLO LEON\u00c9S",
+    "votes": 369
+  },
+  {
+    "district": "Zamora",
+    "party": "PARTIDO REGIONALISTA DEL PA\u00cdS LEON\u00c9S",
+    "votes": 278
+  },
+  {
+    "district": "Zamora",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 143
+  },
+  { "district": "Zamora", "party": "RECORTES CERO-GRUPO VERDE", "votes": 129 },
+  {
+    "district": "Zamora",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 120
+  },
+  {
+    "district": "Soria",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 16043
+  },
+  { "district": "Soria", "party": "PARTIDO POPULAR", "votes": 15247 },
+  { "district": "Soria", "party": "VOX", "votes": 6264 },
+  { "district": "Soria", "party": "UNIDAS PODEMOS", "votes": 3517 },
+  {
+    "district": "Soria",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 2670
+  },
+  {
+    "district": "Soria",
+    "party": "PLATAFORMA DEL PUEBLO SORIANO",
+    "votes": 1466
+  },
+  {
+    "district": "Soria",
+    "party": "PARTIDO ANIMALISTA CONTRA EL MALTRATO ANIMAL",
+    "votes": 205
+  },
+  { "district": "Soria", "party": "POR UN MUNDO M\u00c1S JUSTO", "votes": 95 },
+  { "district": "Soria", "party": "RECORTES CERO-GRUPO VERDE", "votes": 95 },
+  {
+    "district": "Soria",
+    "party": "PARTIDO COMUNISTA DE LOS TRABAJADORES DE ESPA\u00d1A",
+    "votes": 87
+  },
+  { "district": "Ceuta", "party": "VOX", "votes": 11752 },
+  {
+    "district": "Ceuta",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 10455
+  },
+  { "district": "Ceuta", "party": "PARTIDO POPULAR", "votes": 7439 },
+  { "district": "Ceuta", "party": "UNIDAS PODEMOS", "votes": 1300 },
+  {
+    "district": "Ceuta",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 1138
+  },
+  {
+    "district": "Ceuta",
+    "party": "MOVIMIENTO POR LA DIGNIDAD Y LA CIUDADAN\u00cdA DE CEUTA",
+    "votes": 819
+  },
+  { "district": "Ceuta", "party": "RECORTES CERO-GRUPO VERDE", "votes": 125 },
+  { "district": "Ceuta", "party": "POR UN MUNDO M\u00c1S JUSTO", "votes": 43 },
+  { "district": "Melilla", "party": "PARTIDO POPULAR", "votes": 9136 },
+  {
+    "district": "Melilla",
+    "party": "COALICI\u00d3N POR MELILLA",
+    "votes": 8955
+  },
+  { "district": "Melilla", "party": "VOX", "votes": 5692 },
+  {
+    "district": "Melilla",
+    "party": "PARTIDO SOCIALISTA OBRERO ESPA\u00d1OL",
+    "votes": 5087
+  },
+  {
+    "district": "Melilla",
+    "party": "CIUDADANOS-PARTIDO DE LA CIUDADAN\u00cdA",
+    "votes": 917
+  },
+  { "district": "Melilla", "party": "UNIDAS PODEMOS", "votes": 809 },
+  { "district": "Melilla", "party": "LOS VERDES", "votes": 101 },
+  {
+    "district": "Melilla",
+    "party": "POR UN MUNDO M\u00c1S JUSTO",
+    "votes": 31
+  },
+  { "district": "Melilla", "party": "RECORTES CERO-GRUPO VERDE", "votes": 19 }
+]
