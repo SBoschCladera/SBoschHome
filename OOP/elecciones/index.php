@@ -18,7 +18,6 @@ $fullData = $logic->applyDhondtAlgorithm();
 $generalData = $logic->calculateGeneralData($fullData);
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,6 +95,7 @@ $generalData = $logic->calculateGeneralData($fullData);
     <tbody>
     <?php
 
+
     if ($filterBy == 'parties' || $filterBy == 'districts') {
 
         foreach ($fullData as $row) {
@@ -139,6 +139,7 @@ $generalData = $logic->calculateGeneralData($fullData);
 <script type="text/javascript">
 
     function filterTypeChange() {
+
         var filterType = document.getElementById("filterBy").value;
         if (filterType == "districts") {
             $("#filterDistrict").removeClass("d-none").addClass("d-block");
