@@ -34,7 +34,7 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-/*
+
 // CREAR BASE DE DATOS
 
 $sql = "CREATE DATABASE elecciones";
@@ -46,7 +46,7 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-
+/*
 //  CREAR TABLAS
 
 // tabla districts
