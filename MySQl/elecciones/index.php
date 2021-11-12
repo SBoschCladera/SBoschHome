@@ -16,10 +16,25 @@ $filterParty = isset($_GET["filterParty"]) ? strval($_GET["filterParty"]) : "";
 //Datos ya procesados, fullData es la información a nivel de distrito y general data a nivel nacional.
 $fullData = $logic->applyDhondtAlgorithm();
 $generalData = $logic->calculateGeneralData($fullData);
-
+/*
 
 // CONEXIÓN A BASE DE DATOS
 
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+*/
+
+/*
+// CREAR BASE DE DATOS
 
 $servername = "localhost";
 $username = "root";
@@ -27,79 +42,161 @@ $password = "1234";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
-
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
-
-
-// CREAR BASE DE DATOS
 
 $sql = "CREATE DATABASE elecciones";
 if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
+    echo "Database created successfully"."<br>";
 } else {
-    echo "Error creating database: " . $conn->error;
+    echo "Error creating database: " ."<br>". $conn->error;
 }
 
-$conn->close();
 
-/*
 //  CREAR TABLAS
 
-// tabla districts
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+$dbname = "elecciones";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " ."<br>". $conn->connect_error);
+}
+
+
+        // tabla districts
 
 $sql = "CREATE TABLE districts (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(200) NOT NULL,
-delegates int,
+delegates int
 )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Table districts created successfully";
+    echo "Table districts created successfully"."<br>";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table: " ."<br>". $conn->error;
 }
 
-$conn->close();
 
-// tabla parties
+
+        // tabla parties
 
 $sql = "CREATE TABLE parties (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(200) NOT NULL,
 acronym VARCHAR(100),
 logo VARCHAR(200),
-colour VARCHAR(50);
+colour VARCHAR(50)
 )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Table parties created successfully";
+    echo "Table parties created successfully"."<br>";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table: " ."<br>". $conn->error;
 }
 
-$conn->close();
 
-// tabla results
 
-$sql = "CREATE TABLE parties (
+        // tabla results
+
+$sql = "CREATE TABLE results (
 districts VARCHAR(200) NOT NULL PRIMARY KEY,
 party VARCHAR(200) NOT NULL,
-votes int;
+votes int
 )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Table parties created successfully";
+    echo "Table parties created successfully"."<br>";
 } else {
-    echo "Error creating table: " . $conn->error;
+    echo "Error creating table: " ."<br>". $conn->error;
+}
+*/
+    // Insertar datos
+
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+$dbname = "elecciones";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " ."<br>". $conn->connect_error);
 }
 
+$contents_results = file_get_contents("https://dawsonferrer.com/allabres/apis_solutions/elections/api.php?data=results");
+$results = json_decode($contents_results, true);
+
+$contents_parties = file_get_contents("https://dawsonferrer.com/allabres/apis_solutions/elections/api.php?data=parties");
+$parties= json_decode($contents_parties, true);
+
+$contents_districts = file_get_contents("https://dawsonferrer.com/allabres/apis_solutions/elections/api.php?data=districts");
+$districts = json_decode($contents_districts, true);
+
+//foreach ($districts as $district) {
+
+  for($i = 0;$i < count($districts); $i++){
+    $id = $districts['id'][$i];
+    $name = $districts['name'][$i];
+    $delegates = $districts['delegates'][$i];
+
+    $sql = "INSERT INTO districts (id, name, delegates)
+VALUES ($id,'$name' , $delegates )";
+    $conn->query($sql);
+}
+if ($conn->multi_query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+/*
+foreach ($parties as $party) {
+    $id = $parties['id'];
+    $name = $parties['name'];
+    $acronym = $parties['acronym'];
+    $logo = $parties['logo'];
+    $colour = $parties['colour'];
+
+    $sql .= "INSERT INTO parties (id, name, acronym,logo,colour)
+VALUES ($id,`$name` ,`$acronym`,`$logo`,`$colour` )";
+    $conn->query($sql);
+}
+if ($conn->multi_query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+foreach ($results as $result) {
+    $district = $results['district'];
+    $party = $results['party'];
+    $votes= $results['votes'];
+
+    $sql = "INSERT INTO results (districts, party, votes)
+VALUES (`$district`,`$party` ,`$votes`)";
+    $conn->query($sql);
+}
+if ($conn->multi_query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}*/
 $conn->close();
 
-*/
+
+
+
+
+
+
 
 ?>
 <!DOCTYPE html>
