@@ -144,7 +144,7 @@ $contents_districts = file_get_contents("https://dawsonferrer.com/allabres/apis_
 $districts = json_decode($contents_districts, true);
 
 // INSERT PARA districts
-
+/*
 $sql ="";
 foreach ($districts as $distrito) {
     $sql .= 'INSERT INTO districts(id , name, delegates) VALUES(
@@ -179,17 +179,15 @@ if ($conn->multi_query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-
+*/
 // INSERT PARA results
-
 
 $sql ="";
 foreach ($results as $resultado) {
-    $sql .= 'INSERT INTO results(district , party , votes) VALUES(
-           "' .$resultado["district"] .'",
-           "' .$resultado["party"].'",
-           "' .$resultado["votes"] .'"          
-);';
+    $sql .= 'INSERT INTO results(districts , party , votes) VALUES(
+           "' . $resultado["district"] . '", "' .
+        $resultado["party"] . '", ' .
+        $resultado["votes"] . ');';
 }
 
 if ($conn->multi_query($sql) === TRUE) {
@@ -197,9 +195,27 @@ if ($conn->multi_query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
+$conn->close();
+/** GET DATA FROM MySQL DB */
+/*
+// data from table parties
+$sql ="SELECT * FROM parties;";
+$result = mysqli_query($conn, $sql);
+$data_Partidos = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// data from table $districts
+$sql ="SELECT * FROM $districts;";
+$result = mysqli_query($conn, $sql);
+$data_Provincias = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// data from table $results
+$sql ="SELECT * FROM $results;";
+$result = mysqli_query($conn, $sql);
+$data_Resultados = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 $conn->close();
 
+*/
 
 ?>
 <!DOCTYPE html>
