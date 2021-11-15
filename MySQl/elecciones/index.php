@@ -16,8 +16,8 @@ $filterParty = isset($_GET["filterParty"]) ? strval($_GET["filterParty"]) : "";
 //Datos ya procesados, fullData es la información a nivel de distrito y general data a nivel nacional.
 $fullData = $logic->applyDhondtAlgorithm();
 $generalData = $logic->calculateGeneralData($fullData);
-/*
 
+/*
 // CONEXIÓN A BASE DE DATOS
 
 $servername = "localhost";
@@ -25,15 +25,15 @@ $username = "root";
 $password = "1234";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password
+$conn = new mysqli($servername, $username, $password);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
-*/
 
-/*
+
+
 // CREAR BASE DE DATOS
 
 $servername = "localhost";
@@ -117,7 +117,9 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error creating table: " ."<br>". $conn->error;
 }
+
 */
+
     // Insertar datos
 
 $servername = "localhost";
@@ -141,61 +143,62 @@ $parties= json_decode($contents_parties, true);
 $contents_districts = file_get_contents("https://dawsonferrer.com/allabres/apis_solutions/elections/api.php?data=districts");
 $districts = json_decode($contents_districts, true);
 
-//foreach ($districts as $district) {
+// INSERT PARA districts
 
-  for($i = 0;$i < count($districts); $i++){
-    $id = $districts['id'][$i];
-    $name = $districts['name'][$i];
-    $delegates = $districts['delegates'][$i];
+$sql ="";
+foreach ($districts as $distrito) {
+    $sql .= 'INSERT INTO districts(id , name, delegates) VALUES(
+           "' .$distrito["id"] .'",
+           "' .$distrito["name"].'",
+           "' .$distrito["delegates"] .'"          
+);';
+}
 
-    $sql = "INSERT INTO districts (id, name, delegates)
-VALUES ($id,'$name' , $delegates )";
-    $conn->query($sql);
-}
-if ($conn->multi_query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-/*
-foreach ($parties as $party) {
-    $id = $parties['id'];
-    $name = $parties['name'];
-    $acronym = $parties['acronym'];
-    $logo = $parties['logo'];
-    $colour = $parties['colour'];
-
-    $sql .= "INSERT INTO parties (id, name, acronym,logo,colour)
-VALUES ($id,`$name` ,`$acronym`,`$logo`,`$colour` )";
-    $conn->query($sql);
-}
 if ($conn->multi_query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-foreach ($results as $result) {
-    $district = $results['district'];
-    $party = $results['party'];
-    $votes= $results['votes'];
+// INSERT PARA parties
 
-    $sql = "INSERT INTO results (districts, party, votes)
-VALUES (`$district`,`$party` ,`$votes`)";
-    $conn->query($sql);
+$sql ="";
+foreach ($parties as $partido) {
+    $sql .= 'INSERT INTO parties(id , name, acronym , logo, colour) VALUES(
+           "' .$partido["id"] .'",
+           "' .$partido["name"].'",
+           "' .$partido["acronym"] .'", 
+           "' .$partido["logo"] .'",
+           "' .$partido["colour"] .'"
+);';
 }
+
 if ($conn->multi_query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
-}*/
+}
+
+
+// INSERT PARA results
+
+
+$sql ="";
+foreach ($results as $resultado) {
+    $sql .= 'INSERT INTO results(district , party , votes) VALUES(
+           "' .$resultado["district"] .'",
+           "' .$resultado["party"].'",
+           "' .$resultado["votes"] .'"          
+);';
+}
+
+if ($conn->multi_query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
 $conn->close();
-
-
-
-
-
-
 
 
 ?>
