@@ -180,7 +180,7 @@ if ($conn->multi_query($sql) === TRUE) {
 }
 
 */
-// INSERT PARA results
+// INSERT PARA results *
 
 $sql ="";
 foreach ($results as $resultado) {
