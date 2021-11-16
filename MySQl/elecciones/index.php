@@ -17,13 +17,12 @@ $filterParty = isset($_GET["filterParty"]) ? strval($_GET["filterParty"]) : "";
 $fullData = $logic->applyDhondtAlgorithm();
 $generalData = $logic->calculateGeneralData($fullData);
 
-
+/*
 // CONEXIÓN A BASE DE DATOS
 
-$servername = "sql480.main-hosting.eu";
-$username = "u850300514_sbosch";
-$password = "x43110436H";
-$dbname = "u850300514_sbosch";
+$servername = "localhost";
+$username = "root";
+$password = "1234";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -36,6 +35,10 @@ echo "Connected successfully";
 
 
 // CREAR BASE DE DATOS
+
+$servername = "localhost";
+$username = "root";
+$password = "1234";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -54,6 +57,10 @@ if ($conn->query($sql) === TRUE) {
 
 //  CREAR TABLAS
 
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+$dbname = "elecciones";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -111,7 +118,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error creating table: " ."<br>". $conn->error;
 }
 
-
+*/
 
     // Insertar datos
 
