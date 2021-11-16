@@ -9,7 +9,7 @@ class Logic
 
     private $url_base = "https://dawsonferrer.com/allabres/apis_solutions/elections/api.php?data=";
     //Url para extraer los datos (local)
-    private $url_base_local = "http://localhost/SBosch/SBoschHome/OOP/elecciones/api/";
+    private $url_base_local = "http://localhost/SBoschHome/OOP/elecciones/api/";
     //Boolean que indica si debemos extraer los datos de local
     private $run_local = true;
 
