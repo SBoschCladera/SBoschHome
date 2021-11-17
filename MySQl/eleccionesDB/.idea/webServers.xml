@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fac795ec-5002-4bae-bc4b-0a429eb3e820" name="elecciones" url="http://localhost/sebas">
+        <fileTransfer mountedRoot="C:\xampp\htdocs\sebas" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
