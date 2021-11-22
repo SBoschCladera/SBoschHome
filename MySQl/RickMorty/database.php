@@ -7,21 +7,19 @@ $charactersjson = json_decode(file_get_contents($api_url . "characters"), true);
 $episodesjson = json_decode(file_get_contents($api_url . "episodes"), true);
 $locationsjson = json_decode(file_get_contents($api_url . "locations"), true);
 
-
+/*
 // CONEXIÓN A BASE DE DATOS
 
 $servername = "sql480.main-hosting.eu";
 $username = "u850300514_sbosch";
 $password = "x43110436H";
 $dbname = "u850300514_sbosch";
+*/
 
-/*
 $servername = "localhost";
 $username = "root";
 $password = "1234";
 $dbname = "RickAndMorty";
-
-*/
 
 
 // Create connection
@@ -38,7 +36,7 @@ echo "Connected successfully" . "<br>";
 // CREAR BASE DE DATOS
 
 
-$sql = "CREATE DATABASE IF NOT EXIST u850300514_sbosch";
+$sql = "CREATE DATABASE IF NOT EXISTS RickAndMorty";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully" . "<br>";
 } else {
@@ -59,17 +57,17 @@ if ($conn->connect_error) {
 
 
 $sql = "CREATE TABLE IF NOT EXISTS Caracteres (
-        id VARCHAR(100) PRIMARY KEY,
-        name VARCHAR(200),
-        status VARCHAR(50),
-        species VARCHAR(50),
-        type VARCHAR(50),
-        gender VARCHAR(50),
-        origin int,
-        location int,
-        image VARCHAR(200),
-        created VARCHAR(100),
-        episodes VARCHAR(200)
+        idChar VARCHAR(100) PRIMARY KEY,
+        nameChar VARCHAR(200),
+        statusChar VARCHAR(50),
+        speciesChar VARCHAR(50),
+        typeChar VARCHAR(50),
+        genderChar VARCHAR(50),
+        originChar int,
+        locationChar int,
+        imageChar VARCHAR(200),
+        createdChar VARCHAR(100)
+       
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -82,12 +80,11 @@ if ($conn->query($sql) === TRUE) {
 // tabla Episodios
 
 $sql = "CREATE TABLE IF NOT EXISTS Episodios (
-        id VARCHAR(100) PRIMARY KEY,
-        name VARCHAR(200),
-        air_date VARCHAR(100),
-        episode VARCHAR(100),
-        created VARCHAR(50),
-        characters VARCHAR(200)
+        idEp VARCHAR(100) PRIMARY KEY,
+        nameEp VARCHAR(200),
+        air_dateEp VARCHAR(100),
+        episodeEp VARCHAR(100),
+        createdEp VARCHAR(50)
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -100,12 +97,11 @@ if ($conn->query($sql) === TRUE) {
 // tabla Locations
 
 $sql = "CREATE TABLE IF NOT EXISTS Locations (
-        id VARCHAR(50) PRIMARY KEY,
-        name VARCHAR(200) ,
-        type VARCHAR(50),
-        dimension VARCHAR (100),
-        created VARCHAR(200),
-        residents VARCHAR (900)
+        idLoc VARCHAR(50) PRIMARY KEY,
+        nameLoc VARCHAR(200) ,
+        typeLoc VARCHAR(50),
+        dimensionLoc VARCHAR (100),
+        createdLoc VARCHAR(200)
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -113,17 +109,17 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error creating table: " . "<br>" . $conn->error;
 }
-/*
+
 
 // Tabla episodios_locations
 
 
 $sql = "CREATE TABLE IF NOT EXISTS episodios_caracteres (
-        ep_ch_id  int AUTO_INCREMENT PRIMARY KEY,
-        id_cha int,
-        id_epi int,
-        FOREIGN KEY (id_cha) REFERENCES Caracteres(id) ON DELETE CASCADE,
-        FOREIGN KEY (id_epi) REFERENCES Episodios(id) ON DELETE CASCADE
+        ep_ch_id  VARCHAR(200) PRIMARY KEY,
+        id_cha VARCHAR(200),
+        id_epi VARCHAR(200),
+        FOREIGN KEY (id_cha) REFERENCES Caracteres(idChar) ON DELETE CASCADE,
+        FOREIGN KEY (id_epi) REFERENCES Episodios(idEp) ON DELETE CASCADE
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -131,13 +127,13 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error creating table: " . "<br>" . $conn->error;
 }
-*/
+
 
 // INSERT PARA Caracteres
 
 $sql = "";
 foreach ($charactersjson as $character) {
-    $sql .= 'INSERT INTO Caracteres(id, name, status, species, type, gender, origin, location, image, created, episodes) VALUES(
+    $sql .= 'INSERT INTO Caracteres(idChar, nameChar, statusChar, speciesChar, typeChar, genderChar, originChar, locationChar, imageChar, createdChar) VALUES(
           "' . $character["id"] . '", 
           "' . $character["name"] . '", 
           "' . $character["status"] . '", 
@@ -147,9 +143,8 @@ foreach ($charactersjson as $character) {
            ' . $character["origin"] . ', 
            ' . $character["location"] . ', 
           "' . $character["image"] . '", 
-          "' . $character["created"] . '", 
-          "' . json_encode($charactersjson["episodes"]) . '"
-          )';
+          "' . $character["created"] . '"
+          );';
 }
 
 if ($conn->multi_query($sql) === TRUE) {
@@ -163,14 +158,13 @@ if ($conn->multi_query($sql) === TRUE) {
 
 $sql = "";
 foreach ($episodesjson as $episode) {
-    $sql .= 'INSERT INTO Episodios(id , name, air_date , episode, created, characters) VALUES(
+    $sql .= 'INSERT INTO Episodios(idEp , nameEp, air_dateEp , episodeEp, createdEp) VALUES(
            "' . $episode["id"] . '", 
            "' . $episode["name"] . '", 
            "' . $episode["air_date"] . '", 
            "' . $episode["episode"] . '", 
-           "' . $episode["created"] . '",
-           "' . json_encode($episodesjson["characters"]) . '"
-               )';
+           "' . $episode["created"] . '"
+               );';
 }
 
 if ($conn->multi_query($sql) === TRUE) {
@@ -184,14 +178,13 @@ if ($conn->multi_query($sql) === TRUE) {
 
 $sql = "";
 foreach ($locationsjson as $location) {
-    $sql .= 'INSERT INTO Locations(id , name, type , dimension, created, residents) VALUES(
+    $sql .= 'INSERT INTO Locations(idLoc , nameLoc, typeLoc , dimensionLoc, createdLoc) VALUES(
            "' . $location["id"] . '", 
            "' . $location["name"] . '", 
            "' . $location["type"] . '", 
            "' . $location["dimension"] . '", 
-           "' . $location["created"] . '",
-           "' . json_encode($locationsjson["residents"]) . '"
-           )';
+           "' . $location["created"] . '"
+           );';
 
 }
 
