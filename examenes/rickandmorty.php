@@ -220,6 +220,7 @@ $mappedCharacters = mapCharacters($characters);
                 // var_dump(getSortedCharactersByOrigin($characters));
                 // var_dump(getSortedCharactersByStatus($characters));
 
+
                 ?>
             </div>
         </div>
