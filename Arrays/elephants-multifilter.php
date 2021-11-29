@@ -71,7 +71,7 @@ function getSortedElephantsByHavingImage($elephants){
 }
 
 if(isset($_GET["sortingCriteria"])){
-    //TODO: Logic to call a function depending on the sorting criteria.
+    //TODO: logic to call a function depending on the sorting criteria.
 
     $mostrar = ($_GET["sortingCriteria"]);
 
@@ -172,7 +172,7 @@ if(isset($_GET["sortingCriteria"])){
     <div class="row">
 
         <?php
-        //TODO: Logic to print the elephants cards.
+        //TODO: logic to print the elephants cards.
         //NOTES 1: You can copy the markup language from the solution deployment.
 
         for ($i = 0; $i < count($elephants); $i++) {

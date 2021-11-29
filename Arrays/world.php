@@ -71,7 +71,7 @@ function getSortedCitiesByPopulation($cities){
     <thead>
     <tr>
         <th colspan="6">Cities of the world (<?php
-              //TODO: Logic to print the number of cities.
+              //TODO: logic to print the number of cities.
             echo count(getUnsortedCities($world));
               ?>)
 
@@ -92,7 +92,7 @@ function getSortedCitiesByPopulation($cities){
     </thead>
     <tbody>
     <?php
-    //TODO: Logic to print the table body.
+    //TODO: logic to print the table body.
 
 
      $UnsortedArray = getUnsortedCities($world);

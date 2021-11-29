@@ -54,7 +54,7 @@ function getSortedElephantsByNumber($elephants)
 <table>
     <thead>
     <tr>
-        <th colspan="6">Elephants (<?php ////TODO: Logic to print the number of elephants.
+        <th colspan="6">Elephants (<?php ////TODO: logic to print the number of elephants.
 
                     echo count($elephants);
 
@@ -75,7 +75,7 @@ function getSortedElephantsByNumber($elephants)
     </thead>
     <tbody>
     <?php
-    //TODO: Logic to print the table body.
+    //TODO: logic to print the table body.
 
     $total = count($elephants);
     $elefantesOrdenados  = getSortedElephantsByNumber($elephants);
