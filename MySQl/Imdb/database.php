@@ -38,7 +38,7 @@ class database extends mysqli
         $query = $this->query($sql);
         $this->close();
         $result = $query->fetch_assoc();
-        $return = new genero($result["generoId"], $result["nombre"]);
+        $return = new genero($result["generoId"], $result["descripcion"]);
         return $return;
     }
 
@@ -83,7 +83,7 @@ class database extends mysqli
         $this->close();
         $return = array();
         while ($result = $query->fetch_assoc()) {
-            $return[] = new actores_pelicula($result["peliculaId"], $result["actor1Id"], $result["actor2Id"], $result["actor2Id"]);
+            $return[] = new actores_pelicula($result["peliculaId"], $result["actor1Id"], $result["actor2Id"], $result["actor3Id"]);
         }
         return $return;
     }
@@ -109,11 +109,10 @@ class database extends mysqli
         $this->close();
         $return = array();
         while ($result = $query->fetch_assoc()) {
-            $return[] = new generos_pelicula($result["peliculaId"], $result["genero1Id"], $result["genero2Id"], $result["genero2Id"]);
+            $return[] = new generos_pelicula($result["peliculaId"], $result["genero1Id"], $result["genero2Id"], $result["genero3Id"]);
         }
         return $return;
     }
-
 
     public function getPelicula($peliculaId): pelicula
     {

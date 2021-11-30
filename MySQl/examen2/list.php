@@ -23,6 +23,8 @@ if (isset($_GET["propertyId"])) {
     $zoom = 15;
 }
 
+
+
 ?>
 
 

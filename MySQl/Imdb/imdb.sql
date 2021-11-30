@@ -9,35 +9,35 @@ CREATE TABLE IF NOT EXISTS genero (
 	descripcion 	VARCHAR(15) );
     
       
-    CREATE TABLE  IF NOT EXISTS pais (
+CREATE TABLE  IF NOT EXISTS pais (
 	paisId	INT(5) PRIMARY KEY, 
-	nombre	VARCHAR(15));
+	nombre	VARCHAR(50));
 
 
- CREATE TABLE  IF NOT EXISTS actor (
+CREATE TABLE  IF NOT EXISTS actor (
 	actorId	INT(5) PRIMARY KEY,
-	nombre 		VARCHAR(15), 
+	nombre 		VARCHAR(30), 
     apellidos   VARCHAR(50),
-    imagen	VARCHAR(150),
+    imagen	VARCHAR(450),
     oscars	int (5),
-    anyoNacimiento VARCHAR (20),
+    anyoNacimiento VARCHAR (50),
     lugarNacimiento int (5),
      FOREIGN KEY (lugarNacimiento) REFERENCES pais(paisId));   
     
 CREATE TABLE IF NOT EXISTS director (
 	directorId	INT(5) PRIMARY KEY, 
-	nombre	VARCHAR(15), 
+	nombre	VARCHAR(50), 
     apellidos VARCHAR (50),
-    imagen VARCHAR(150),
+    imagen VARCHAR(450),
     oscars int (5),
-	anyoNacimiento VARCHAR (20),
+	anyoNacimiento VARCHAR (50),
     lugarNacimiento int (5),
 		FOREIGN KEY (lugarNacimiento) REFERENCES pais(paisId));   
         
         
 CREATE TABLE IF NOT EXISTS pelicula (
 	peliculaId	INT(5) PRIMARY KEY,
-	titulo		VARCHAR(25),
+	titulo		VARCHAR(100),
     director1Id  int(5),
     director2Id int(5),
 	genero1Id	INT(5),
@@ -46,19 +46,19 @@ CREATE TABLE IF NOT EXISTS pelicula (
 	actor1Id	INT(5),
     actor2Id	INT(5),
     actor3Id	INT(5),
-    imagen VARCHAR(150),
+    imagen VARCHAR(450),
     nota float(5),
     estreno int(10),
-    trailer VARCHAR(150),
+    trailer VARCHAR(650),
     sinopsis VARCHAR (1000),
-		FOREIGN KEY (genero1Id) REFERENCES genero(generoId),
+		FOREIGN KEY (director1Id) REFERENCES director(directorId),
+        FOREIGN KEY (director2Id) REFERENCES director(directorId),
+        FOREIGN KEY (genero1Id) REFERENCES genero(generoId),
         FOREIGN KEY (genero2Id) REFERENCES genero(generoId),
         FOREIGN KEY (genero3Id) REFERENCES genero(generoId),
         FOREIGN KEY (actor1Id) REFERENCES actor(actorId),
         FOREIGN KEY (actor2Id) REFERENCES actor(actorId),
-        FOREIGN KEY (actor3Id) REFERENCES actor(actorId),
-        FOREIGN KEY (director1Id) REFERENCES director(directorId),
-        FOREIGN KEY (director2Id) REFERENCES director(directorId));
+        FOREIGN KEY (actor3Id) REFERENCES actor(actorId));
 
 CREATE TABLE IF NOT EXISTS actores_pelicula (
 	peliculaId	INT(5) PRIMARY KEY,
@@ -163,6 +163,21 @@ INSERT INTO actor VALUES (42, 'Kenneth', 'Branagh','https://www.imdb.com/name/nm
 INSERT INTO actor VALUES (43, 'Emma', 'Thompson','https://www.imdb.com/name/nm0000668/mediaviewer/rm118653440/', 2, '15-04-1959',4);
 
 
+INSERT INTO director VALUES (1, 'Ridley', 'Scott', 'https://www.imdb.com/name/nm0000631/mediaviewer/rm1374618368/', 1 ,'30-11-1937', 4);
+INSERT INTO director VALUES (2, 'Todd', 'Phillips', 'https://www.imdb.com/name/nm0680846/mediaviewer/rm2385862656/', 0 , '20-12-1970', 5);
+INSERT INTO director VALUES (3, 'Rob', 'Letterman', 'https://www.imdb.com/name/nm1224299/mediaviewer/rm1631168512/', 0 , '31-01-1970', 5);
+INSERT INTO director VALUES (4, 'Patty', 'Jenkins', 'https://www.imdb.com/name/nm0420941/mediaviewer/rm1541732608/', 0 , '24-07-1971', 5);
+INSERT INTO director VALUES (5, 'Ivan', 'Reitman', 'https://www.imdb.com/name/nm0718645/mediaviewer/rm1135251200/', 0 , '27-10-1946', 9);
+INSERT INTO director VALUES (6, 'Martin', 'Scorsese', 'https://www.imdb.com/name/nm0000217/mediaviewer/rm1221431040/', 1 , '17-11-1942', 5);
+INSERT INTO director VALUES (7, 'Joe', 'Dante', 'https://www.imdb.com/name/nm0001102/mediaviewer/rm1826930688/', 0 , '28-11-1946', 5);
+INSERT INTO director VALUES (8, 'Quentin', 'Tarantino', 'https://www.imdb.com/name/nm0000233/mediaviewer/rm4146963200/', 2 , '27-03-1963', 5);
+INSERT INTO director VALUES (9, 'Lana', 'Wachowsky', 'https://www.imdb.com/name/nm0905154/mediaviewer/rm3382618368/', 0 , '21-06-1965', 5);
+INSERT INTO director VALUES (10, 'Lilly', 'Wachowsky', 'https://www.imdb.com/name/nm0905152/mediaviewer/rm1928797184/', 0 , '29-12-1967', 5);
+INSERT INTO director VALUES (11, 'Steven', 'Speilberg', 'https://www.imdb.com/name/nm0000229/mediaviewer/rm4050361088/', 3 , '18-12-1946', 5);
+INSERT INTO director VALUES (12, 'George', 'Lucas', 'https://www.imdb.com/name/nm0000184/mediaviewer/rm1722651904/', 0 , '14-05-1944', 5);
+INSERT INTO director VALUES (13, 'David', 'Fincher', 'https://www.imdb.com/name/nm0000399/mediaviewer/rm1913489920/', 0 , '28-08-1962', 5);
+INSERT INTO director VALUES (14, 'Kenneth', 'Branagh', 'https://www.imdb.com/name/nm0000110/mediaviewer/rm2013376768/', 0 , '10-12-1960', 13);
+
 INSERT INTO pelicula VALUES (1, 'Gladiator', 1, null , 4, 5, 3, 1, 2, 3, 'https://www.imdb.com/title/tt0172495/mediaviewer/rm2442542592/', 8.5, 2000, 'https://www.imdb.com/video/vi2628367897/?ref_=tt_vi_i_1', 'En el año 180, el Imperio Romano domina todo el mundo conocido. Tras una gran victoria sobre los bárbaros del norte, el anciano emperador Marco Aurelio decide transferir el poder a Máximo, bravo general de sus ejércitos y hombre de inquebrantable lealtad al imperio. Pero su hijo Cómodo, que aspiraba al trono, no lo acepta y trata de asesinar a Máximo.' );
 INSERT INTO pelicula VALUES (2, 'Joker', 2, null , 12, 3, 7, 2, 5, 6, 'https://www.imdb.com/title/tt7286456/mediaviewer/rm3353122305/', 8.4, 2019, 'https://www.imdb.com/video/vi1723318041?playlistId=tt7286456&ref_=tt_ov_vi', 'Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír. Pero una serie de trágicos acontecimientos le llevarán a ver el mundo de otra forma. Película basada en Joker, el popular personaje de DC Comics y archivillano de Batman, pero que en este film toma un cariz más realista y oscuro.');
 INSERT INTO pelicula VALUES (3, 'Detective Pikachu', 3, null, 2, 4, 5, 6, 7, 8, 'https://www.imdb.com/title/tt5884052/mediaviewer/rm2806279168/', 6.6, 2019, 'https://www.imdb.com/video/vi3254238233?playlistId=tt5884052&ref_=tt_pr_ov_vi', 'Ryme City, una metrópoli futurista en la que los humanos y los Pokémon conviven en armonía. Tras la misteriosa desaparición de su padre, toda una leyenda en la ciudad, el joven Tim Goodman (Justice Smith) comienza una investigación para buscarle y averiguar lo que le ha sucedido. En esta misión le ayudará el adorable súper-detective Pikachu, un inteligente Pokémon que habla, aunque curiosamente el chico es el único que puede entenderle. Ambos unirán sus fuerzas y trabajarán juntos para resolver este gran misterio, con la ayuda de Lucy (Kathryn Newton), una reportera que trabaja en su primera gran historia. Será una aventura en la que descubrirán a entrañables personajes del universo Pokémon, además de una trama espeluznante que podría amenazar la convivencia pacífica de todo este universo.');
@@ -185,20 +200,7 @@ INSERT INTO pelicula VALUES (19, 'Seven', 13, null , 12, 2, 7, 21, 40, 41, 'http
 INSERT INTO pelicula VALUES (20, 'Mucho ruido y pocas nueces', 14, null , 2, 3, 15, 24, 42, 43, 'https://www.imdb.com/title/tt0107616/mediaviewer/rm375920640/', 7.3, 1993, 'https://www.imdb.com/video/vi1402667289?playlistId=tt0107616&ref_=tt_ov_vi', 'Adaptación de una comedia de Shakespeare. El Príncipe Don Pedro de Aragón (Denzel Washington) regresa victorioso de una batalla acompañado de su hermano bastardo Don Juan (Keanu Reeves), de Benedicto (Kenneth Branagh) y de Claudio (Robert Sean Leonard), un joven florentino que ha sido colmado de honores por el gran valor mostrado en el campo de batalla. Son recibidos con gran regocijo por el caballero Leonato, que vive con su hija Hero (Beckinsale) y su sobrina Beatriz (Emma Thompson) en una paradisíaca villa de la campiña siciliana (Mesina). En el siglo XV, Sicilia formaba parte de los dominios de la Corona de Aragón, lo que explica el nombre de alguno de los personajes.');
 
 
-INSERT INTO director VALUES (1, 'Ridley', 'Scott', 'https://www.imdb.com/name/nm0000631/mediaviewer/rm1374618368/', 1 ,'30-11-1937', 4);
-INSERT INTO director VALUES (2, 'Todd', 'Phillips', 'https://www.imdb.com/name/nm0680846/mediaviewer/rm2385862656/', 0 , '20-12-1970', 5);
-INSERT INTO director VALUES (3, 'Rob', 'Letterman', 'https://www.imdb.com/name/nm1224299/mediaviewer/rm1631168512/', 0 , '31-01-1970', 5);
-INSERT INTO director VALUES (4, 'Patty', 'Jenkins', 'https://www.imdb.com/name/nm0420941/mediaviewer/rm1541732608/', 0 , '24-07-1971', 5);
-INSERT INTO director VALUES (5, 'Ivan', 'Reitman', 'https://www.imdb.com/name/nm0718645/mediaviewer/rm1135251200/', 0 , '27-10-1946', 9);
-INSERT INTO director VALUES (6, 'Martin', 'Scorsese', 'https://www.imdb.com/name/nm0000217/mediaviewer/rm1221431040/', 1 , '17-11-1942', 5);
-INSERT INTO director VALUES (7, 'Joe', 'Dante', 'https://www.imdb.com/name/nm0001102/mediaviewer/rm1826930688/', 0 , '28-11-1946', 5);
-INSERT INTO director VALUES (8, 'Quentin', 'Tarantino', 'https://www.imdb.com/name/nm0000233/mediaviewer/rm4146963200/', 2 , '27-03-1963', 5);
-INSERT INTO director VALUES (9, 'Lana', 'Wachowsky', 'https://www.imdb.com/name/nm0905154/mediaviewer/rm3382618368/', 0 , '21-06-1965', 5);
-INSERT INTO director VALUES (10, 'Lilly', 'Wachowsky', 'https://www.imdb.com/name/nm0905152/mediaviewer/rm1928797184/', 0 , '29-12-1967', 5);
-INSERT INTO director VALUES (11, 'Steven', 'Speilberg', 'https://www.imdb.com/name/nm0000229/mediaviewer/rm4050361088/', 3 , '18-12-1946', 5);
-INSERT INTO director VALUES (12, 'George', 'Lucas', 'https://www.imdb.com/name/nm0000184/mediaviewer/rm1722651904/', 0 , '14-05-1944', 5);
-INSERT INTO director VALUES (13, 'David', 'Fincher', 'https://www.imdb.com/name/nm0000399/mediaviewer/rm1913489920/', 0 , '28-08-1962', 5);
-INSERT INTO director VALUES (14, 'Kenneth', 'Branagh', 'https://www.imdb.com/name/nm0000110/mediaviewer/rm2013376768/', 0 , '10-12-1960', 13);
+
 
 INSERT INTO actores_pelicula VALUES (1, 1, 2, 3);
 INSERT INTO actores_pelicula VALUES (2, 2, 5, 6);
