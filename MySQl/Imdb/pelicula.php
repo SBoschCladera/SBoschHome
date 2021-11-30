@@ -5,22 +5,23 @@ class pelicula
 
     protected int $peliculaId;
     protected string $titulo;
-    protected array $director; // array
-    protected array $genero; // array
-    protected array $actor; // array
+    protected directores_pelicula $directores;
+    protected generos_pelicula $generos;
+    protected actores_pelicula $actores;
     protected string $imagen;
     protected float $nota;
     protected int $estreno;
     protected string $trailer;
     protected string $sinopsis;
 
-    public function __construct(int $peliculaId, string $titulo, array $director, array $genero, array $actor, string $imagen, float $nota, int $estreno, string $trailer, string $sinopsis)
+    public function __construct(int $peliculaId, string $titulo, directores_pelicula $directores, generos_pelicula $generos,
+                                actores_pelicula $actores, string $imagen, float $nota, int $estreno, string $trailer, string $sinopsis)
     {
         $this->peliculaId = $peliculaId;
         $this->titulo = $titulo;
-        $this->director = $director;
-        $this->genero = $genero;
-        $this->actor = $actor;
+        $this->directores = $directores;
+        $this->generos = $generos;
+        $this->actores = $actores;
         $this->imagen = $imagen;
         $this->nota = $nota;
         $this->estreno = $estreno;
@@ -38,19 +39,19 @@ class pelicula
         return $this->titulo;
     }
 
-    public function getDirector(): array
+    public function getDirector(): directores_pelicula
     {
-        return $this->director;
+        return $this->directores;
     }
 
-    public function getGenero(): array
+    public function getGenero(): generos_pelicula
     {
-        return $this->genero;
+        return $this->generos;
     }
 
-    public function getActor(): array
+    public function getActor(): actores_pelicula
     {
-        return $this->actor;
+        return $this->actores;
     }
 
     public function getImagen(): string
@@ -72,7 +73,6 @@ class pelicula
     {
         return $this->trailer;
     }
-
 
     public function getSinopsis(): string
     {

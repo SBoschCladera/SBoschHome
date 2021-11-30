@@ -5,6 +5,9 @@ include_once "director.php";
 include_once "genero.php";
 include_once "pais.php";
 include_once "pelicula.php";
+include_once "actores_pelicula.php";
+include_once "directores_pelicula.php";
+include_once "generos_pelicula.php";
 
 
 class database extends mysqli
@@ -72,6 +75,46 @@ class database extends mysqli
         return $return;
     }
 
+    public function getActoresPelicula(): array
+    {
+        $sql = "SELECT * FROM actores_pelicula";
+        $this->default();
+        $query = $this->query($sql);
+        $this->close();
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new actores_pelicula($result["peliculaId"], $result["actor1Id"], $result["actor2Id"], $result["actor2Id"]);
+        }
+        return $return;
+    }
+
+    public function getDirectoresPelicula(): array
+    {
+        $sql = "SELECT * FROM directores_pelicula";
+        $this->default();
+        $query = $this->query($sql);
+        $this->close();
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new directores_pelicula($result["peliculaId"], $result["director1Id"], $result["director2Id"]);
+        }
+        return $return;
+    }
+
+    public function getGenerosPelicula(): array
+    {
+        $sql = "SELECT * FROM generos_pelicula";
+        $this->default();
+        $query = $this->query($sql);
+        $this->close();
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new generos_pelicula($result["peliculaId"], $result["genero1Id"], $result["genero2Id"], $result["genero2Id"]);
+        }
+        return $return;
+    }
+
+
     public function getPelicula($peliculaId): pelicula
     {
         $sql = "SELECT * FROM pelicula WHERE id = " . $peliculaId;
@@ -79,13 +122,9 @@ class database extends mysqli
         $query = $this->query($sql);
         $this->close();
         $result = $query->fetch_assoc();
-        $resultActores = $query->fetch_assoc();
-        $resultDirectores = $query->fetch_assoc();
-        $resultGeneros = $query->fetch_assoc();
-            $return = new pelicula($result["peliculaId"], $result["titulo"], $resultDirectores(["director1Id"],["director2Id"]),
-                               $resultGeneros(["generoI1d"],["genero2Id"],["genero3Id"]),
-                               $resultActores(["actor1Id"],["actor2Id"],["actor3Id"]), $result["imagen"], $result["nota"],
-                               $result["estreno"], $result["trailer"], $result["sinopsis"]);
+        $return = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["directores"]),
+            $this->getGenerosPelicula($result["generos"]), $this->getActoresPelicula($result["actores"]), $result["imagen"],
+            $result["nota"], $result["estreno"], $result["trailer"], $result["sinopsis"]);
         return $return;
     }
 
@@ -96,16 +135,11 @@ class database extends mysqli
         $query = $this->query($sql);
         $this->close();
         $return = array();
-        $resultActores = $query->fetch_assoc();
-        $resultDirectores = $query->fetch_assoc();
-        $resultGeneros = $query->fetch_assoc();
         while ($result = $query->fetch_assoc()) {
-            $return[] = new pelicula($result["peliculaId"], $result["titulo"], $resultDirectores(["director1Id"],["director2Id"]),
-                                 $resultGeneros(["generoI1d"],["genero2Id"],["genero3Id"]),
-                                 $resultActores(["actor1Id"],["actor2Id"],["actor3Id"]), $result["imagen"], $result["nota"],
-                                 $result["estreno"], $result["trailer"], $result["sinopsis"]);
+            $return[] = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["directores"]),
+                $this->getGenerosPelicula($result["generos"]), $this->getActoresPelicula($result["actores"]), $result["imagen"],
+                $result["nota"], $result["estreno"], $result["trailer"], $result["sinopsis"]);
         }
         return $return;
     }
-
 }
