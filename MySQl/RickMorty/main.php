@@ -4,7 +4,7 @@
 // include("Episodes.php");
 include('Database.php');
 
-$sql = new Database();
+$sql = new database();
 
 $seed = 0110; //LAST 4 NUMBERS OF YOUR DNI.
 $api_url = "https://dawsonferrer.com/allabres/apis_solutions/rickandmorty/api.php?seed=" . $seed . "&data=";

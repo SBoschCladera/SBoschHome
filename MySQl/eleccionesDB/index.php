@@ -2,7 +2,7 @@
 include "./logic/logic.php";
 
 //Instanciamos la clase logic, donde haremos todos los cálculos
-$logic = new Logic();
+$logic = new logic();
 
 //Recuperamos todos los parámetros que el formulario envía mediante get
 //Utilizamos un operador ternario para evitar excepciones con propiedades no seteadas, por defecto será un string vacio

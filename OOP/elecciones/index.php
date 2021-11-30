@@ -1,7 +1,7 @@
 <?php
 include "./logic/logic.php";
 
-$logic = new Logic();
+$logic = new logic();
 
 $filterBy = isset($_GET["filterBy"]) ? strval($_GET["filterBy"]) : "";
 $filterDistrict = isset($_GET["filterDistrict"]) ? strval($_GET["filterDistrict"]) : "";

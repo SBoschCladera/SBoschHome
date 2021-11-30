@@ -35,4 +35,4 @@ Una vez finalizada la aplicación, esta debe subirse al repositorio privado (Git
 
 En caso de considerar necesario el uso de una función predefinida de PHP que no se encuentre en el listado anterior debera consultarse con el profesor.
 
-La correcta ejecución de esta aplicación puede consultarse en https://dawsonferrer.com/allabres/arrays_solutions/rickandmorty.php
+La correcta ejecución de esta aplicación puede consultarse en https://dawsonferrer.com/allabres/arrays_solutions/rickandmorty.php 

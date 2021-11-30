@@ -3,7 +3,7 @@ include "./models/district.php";
 include "./models/party.php";
 include "./models/result.php";
 include "./logic/dhondt.php";
-include "./logic/Database.php";
+include "./logic/database.php";
 
 class Logic
 {
@@ -25,7 +25,7 @@ class Logic
 
     public function __construct()
     {
-        $this->db = new Database();
+        $this->db = new database();
 
         /*Sólo para meter datos en base de datos*/
 /*
