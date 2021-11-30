@@ -1,20 +1,23 @@
 <?php
-include_once "country.php";
-include_once "city.php";
-include_once "image.php";
-include_once "neighborhood.php";
-include_once "state.php";
-include_once "property.php";
-include_once "database.php";
 
-$dbo = new database();
+include_once "country.php";
+include_once "state.php";
+include_once "city.php";
+include_once "neighborhood.php";
+include_once "image.php";
+include_once "property.php";
+include_once "dbo.php";
+
+$dbo = new dbo();
 
 if (isset($_GET["id"])) {
-    $property = $dbo->getProperty($_GET["id"]);
+    $property = $dbo->getproperty($_GET["id"]);
 } else {
     die("NO ID SELECTED");
 }
+
 ?>
+
 
 <html>
 <head>
@@ -31,7 +34,7 @@ if (isset($_GET["id"])) {
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <title>Mallorcasa</title>
 </head>
-<body cz-shortcut-listen="true">
+<body>
 <div class="container">
     <h2 class="text-center"><span><a href="list.php">Mallorcasa</a></span></h2>
 </div>
@@ -40,24 +43,22 @@ if (isset($_GET["id"])) {
         <div class="col-md-8">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current='true' aria-label="Slide 1"></button>
-                    <?php for($i = 1; $i < count($property->getImages()); $i++) { ?>
+                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide-to="0" class='active' aria-current='true' aria-label="Slide 1"></button>
+                    <?php for ($i = 1; $i < count($property->getImages()); $i++) { ?>
                         <button type="button" data-bs-target="#carouselExampleIndicators"
-                                data-bs-slide-to="<?php echo $i ?>"
-                            class='active' aria-current='true' aria-label="
-                                Slide <?php echo $i + 1 ?>" class=""></button>
+                                data-bs-slide-to="<?php echo $i ?>" aria-label="Slide <?php echo $i + 1 ?>"></button>
                     <?php } ?>
 
                 </div>
                 <div class="carousel-inner">
                     <?php foreach ($property->getImages() as $image) { ?>
-                        <div class="carousel-item  <?php echo($property->getImages()[0]->getId() == $image->getId() ? "active" : "") ?>">
+                        <div class="carousel-item <?php echo($property->getImages()[0]->getId() == $image->getId() ? "active" : "") ?>">
                             <img src="<?php echo $image->getUrl() ?>"
-                                 class="d-block w-100" alt="13850">
+                                 class="d-block w-100"
+                                 alt="13850">
                         </div>
                     <?php } ?>
-
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="prev">
@@ -74,7 +75,7 @@ if (isset($_GET["id"])) {
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Property description</h5>
-                    <?php $property->getDescription() ?>
+                    <?php echo $property->getDescription() ?>
                 </div>
             </div>
             <br>
@@ -82,7 +83,7 @@ if (isset($_GET["id"])) {
                 <div class="card-body">
                     <h5 class="card-title">Property location</h5>
                     <iframe width="100%" height="800" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                            src="https://maps.google.com/maps?q=<?php echo $property->getLatitude() ?>>, <?php echo $property->getLongitude() ?>&amp;hl=es&amp;z=15&amp;output=embed"></iframe>
+                            src="https://maps.google.com/maps?q=<?php echo $property->getLatitude() ?>,<?php echo $property->getLongitude() ?>&hl=es&z=15&output=embed"></iframe>
                 </div>
             </div>
 
@@ -97,7 +98,7 @@ if (isset($_GET["id"])) {
                                 <i class="fa fa-info"></i>
                             Property Id
                             </span>
-                            <span class="badge bg-primary rounded-pill"> <?php echo $property->getId() ?></span>
+                            <span class="badge bg-primary rounded-pill"><?php echo $property->getId() ?></span>
                         </li>
 
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -105,7 +106,7 @@ if (isset($_GET["id"])) {
                                 <i class="fa fa-globe"></i>
                             Country
                             </span>
-                            <span class="badge bg-primary rounded-pill"> <?php echo $property->getCountry()->getName() ?></span>
+                            <span class="badge bg-primary rounded-pill"><?php echo $property->getCountry()->getName() ?></span>
                         </li>
 
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -113,7 +114,7 @@ if (isset($_GET["id"])) {
                                 <i class="fa fa-flag"></i>
                             State
                             </span>
-                            <span class="badge bg-primary rounded-pill"> <?php echo $property->getState()->getName() ?></span>
+                            <span class="badge bg-primary rounded-pill"><?php echo $property->getState()->getName() ?></span>
                         </li>
 
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -121,7 +122,7 @@ if (isset($_GET["id"])) {
                                 <i class="fa fa-building-o"></i>
                             City
                             </span>
-                            <span class="badge bg-primary rounded-pill"> <?php echo $property->getCity()->getName() ?></span>
+                            <span class="badge bg-primary rounded-pill"><?php echo $property->getCity()->getName() ?></span>
                         </li>
 
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -129,7 +130,7 @@ if (isset($_GET["id"])) {
                                 <i class="fa fa-building"></i>
                             Neighborhood
                             </span>
-                            <span class="badge bg-primary rounded-pill"> <?php echo $property->getNeighborhood()->getName() ?></span>
+                            <span class="badge bg-primary rounded-pill"><?php echo $property->getNeighborhood()->getName() ?></span>
                         </li>
 
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -137,7 +138,7 @@ if (isset($_GET["id"])) {
                                 <i class="fa fa-envelope"></i>
                             Zip code
                             </span>
-                            <span class="badge bg-primary rounded-pill">0<?php echo $property->getZipcode() ?></span>
+                            <span class="badge bg-primary rounded-pill"><?php echo $property->getZipcode() ?></span>
                         </li>
 
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -145,7 +146,7 @@ if (isset($_GET["id"])) {
                                 <i class="fa fa-calendar"></i>
                             Published
                             </span>
-                            <span class="badge bg-primary rounded-pill"><?php echo $property->getDate()->format("d/m/y") ?></span>
+                            <span class="badge bg-primary rounded-pill"><?php echo $property->getDate()->format("d/m/Y") ?></span>
                         </li>
 
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -185,7 +186,7 @@ if (isset($_GET["id"])) {
                                 <i class="fa fa-eur"></i>
                             Price
                             </span>
-                            <span class="badge bg-primary rounded-pill"><?php echonumber_format($property->getPrice(0, ",", ".")); ?>€</span>
+                            <span class="badge bg-primary rounded-pill"><?php echo $property->getPrice() ?>€</span>
                         </li>
                     </ul>
                 </div>
@@ -194,11 +195,10 @@ if (isset($_GET["id"])) {
         </div>
     </div>
 </div>
-
+</body>
 <script>
     $(document).ready(function () {
         $('.carousel').carousel();
     });
 </script>
-</body>
 </html>

@@ -11,8 +11,12 @@ include_once "generos_pelicula.php";
 include_once "database.php";
 
 $dbo = new database();
-$pelicula = $dbo->getPelicula(5);
-var_dump($pelicula);
 
+//$pelicula = $dbo->getPelicula(5);
+//var_dump($pelicula);
+
+
+//$pelicula = $dbo->getPelicula(5);
+//var_dump($pelicula);
 
 ?>
