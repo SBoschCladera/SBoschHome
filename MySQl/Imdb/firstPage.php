@@ -11,8 +11,16 @@ include_once "generos_pelicula.php";
 include_once "database.php";
 
 $dbo = new database();
-$pelicula = $dbo->getPelicula(5);
-var_dump($pelicula);
+
+$generos = $dbo->getGenerosPelicula();
+var_dump($generos);
+
+$actores = $dbo->getActoresPelicula();
+var_dump($actores);
+
+$directores = $dbo->getDirectoresPelicula();
+var_dump($directores);
+
 
 
 ?>
