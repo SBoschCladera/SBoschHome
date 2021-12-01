@@ -75,54 +75,48 @@ class database extends mysqli
         return $return;
     }
 
-    public function getActoresPelicula(): array
+    public function getActoresPelicula($peliculaId): actores_pelicula
     {
-        $sql = "SELECT * FROM actores_pelicula";
+        $sql = "SELECT actor1Id, actor2Id, actor3Id FROM actores_pelicula WHERE peliculaId = " . $peliculaId;
         $this->default();
         $query = $this->query($sql);
         $this->close();
-        $return = array();
-        while ($result = $query->fetch_assoc()) {
-            $return[] = new actores_pelicula($result["peliculaId"], $result["actor1Id"], $result["actor2Id"], $result["actor3Id"]);
-        }
+        $result = $query->fetch_assoc();
+        $return = new actores_pelicula($result["actor1Id"], $result["actor2Id"], $result["actor3Id"]);
         return $return;
     }
 
-    public function getDirectoresPelicula(): array
+    public function getDirectoresPelicula($peliculaId) :directores_pelicula
     {
-        $sql = "SELECT * FROM directores_pelicula";
+        $sql = "SELECT director1Id, director2Id FROM directores_pelicula WHERE peliculaId = " . $peliculaId;
         $this->default();
         $query = $this->query($sql);
         $this->close();
-        $return = array();
-        while ($result = $query->fetch_assoc()) {
-            $return[] = new directores_pelicula($result["peliculaId"], $result["director1Id"], $result["director2Id"]);
-        }
+        $result = $query->fetch_assoc();
+        $return = new directores_pelicula($result["director1Id"], $result["director2Id"]);
         return $return;
     }
 
-    public function getGenerosPelicula(): array
+    public function getGenerosPelicula($peliculaId): generos_pelicula
     {
-        $sql = "SELECT * FROM generos_pelicula";
+        $sql = "SELECT genero1Id, genero2Id, genero3Id FROM generos_pelicula WHERE peliculaId = " . $peliculaId;
         $this->default();
         $query = $this->query($sql);
         $this->close();
-        $return = array();
-        while ($result = $query->fetch_assoc()) {
-            $return[] = new generos_pelicula($result["peliculaId"], $result["genero1Id"], $result["genero2Id"], $result["genero3Id"]);
-        }
+        $result = $query->fetch_assoc();
+        $return = new generos_pelicula($result["genero1Id"], $result["genero2Id"], $result["genero3Id"]);
         return $return;
     }
 
     public function getPelicula($peliculaId): pelicula
     {
-        $sql = "SELECT * FROM pelicula WHERE id = " . $peliculaId;
+        $sql = "SELECT * FROM pelicula WHERE peliculaId = " . $peliculaId;
         $this->default();
         $query = $this->query($sql);
         $this->close();
         $result = $query->fetch_assoc();
-        $return = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["director1Id"], $result["director2Id"]),
-            $this->getGenerosPelicula($result["genero1Id"], $result["genero2Id"], $result["genero3Id"]), $this->getActoresPelicula($result["actor1Id"], $result["actor2Id"], $result["actor3Id"]), $result["imagen"],
+        $return = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["directores"]),
+            $this->getGenerosPelicula($result["generos"]), $this->getActoresPelicula($result["actores"]), $result["imagen"],
             $result["nota"], $result["estreno"], $result["trailer"], $result["sinopsis"]);
         return $return;
     }
@@ -135,8 +129,8 @@ class database extends mysqli
         $this->close();
         $return = array();
         while ($result = $query->fetch_assoc()) {
-            $return[] = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["director1Id"], $result["director2Id"]),
-                $this->getGenerosPelicula($result["genero1Id"], $result["genero2Id"], $result["genero3Id"]), $this->getActoresPelicula($result["actor1Id"], $result["actor2Id"], $result["actor3Id"]), $result["imagen"],
+            $return[] = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["directores"]),
+                $this->getGenerosPelicula($result["generos"]), $this->getActoresPelicula($result["actores"]), $result["imagen"],
                 $result["nota"], $result["estreno"], $result["trailer"], $result["sinopsis"]);
         }
         return $return;
