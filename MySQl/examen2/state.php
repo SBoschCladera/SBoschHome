@@ -2,32 +2,23 @@
 
 class state
 {
-    protected int $id;
-    protected string $name;
+    protected int  $id;
+    protected int $name;
 
-    /**
-     * @param int $id
-     * @param string $name
-     */
-    public function __construct(int $id, string $name)
+    public function __construct(int $id, int $name)
     {
         $this->id = $id;
         $this->name = $name;
     }
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
-    public function getName(): string
+    public function getName(): int
     {
         return $this->name;
     }
+
 }
