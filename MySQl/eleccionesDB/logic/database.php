@@ -6,7 +6,7 @@ class database
     private $conn;
     private $servername = "localhost";
     private $username = "root";
-    private $password = "";
+    private $password = "1234";
     private $dbname = "Elecciones";
     private $parties_tablename = "partidos";
     private $districts_tablename = "provincias";

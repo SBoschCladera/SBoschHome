@@ -14,7 +14,7 @@ class database extends mysqli
 {
     protected string $servername = "localhost";
     protected string $username = "root";
-    protected string $password = "";
+    protected string $password = "1234";
     protected string $dbname = "imdb";
 
     public function default()

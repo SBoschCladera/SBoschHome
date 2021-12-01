@@ -11,7 +11,7 @@ class Logic
     //Url para extraer los datos (remoto)
     private $url_base = "https://dawsonferrer.com/allabres/apis_solutions/elections/api.php?data=";
     //Url para extraer los datos (local)
-    private $url_base_local = "http://localhost/SBoschHome/MySQl/eleccionesDB/api/";
+    private $url_base_local = "http://localhost/SBosch/SBoschHome/MySQl/eleccionesDB/api/";
     //Flag que nos indica si debemos extraer los datos de local o remoto
     private $run_local = true;
 
