@@ -7,10 +7,11 @@ class director
     protected string $apellidos;
     protected string $imagen;
     protected int $oscars;
-    protected int $anyoNacimiento;
+    protected string $anyoNacimiento;
     protected string $lugarNacimiento;
+    protected int $orden;
 
-    public function __construct(int $directorId, string $nombre, string $apellidos, string $imagen, int $oscars, int $anyoNacimiento, string $lugarNacimiento)
+    public function __construct(int $directorId, string $nombre, string $apellidos, string $imagen, int $oscars, string $anyoNacimiento, string $lugarNacimiento, int $orden = 0)
     {
         $this->directorId = $directorId;
         $this->nombre = $nombre;
@@ -19,6 +20,7 @@ class director
         $this->oscars = $oscars;
         $this->anyoNacimiento = $anyoNacimiento;
         $this->lugarNacimiento = $lugarNacimiento;
+        $this->orden = $orden;
     }
 
     public function getDirectorId(): int
@@ -46,7 +48,7 @@ class director
         return $this->oscars;
     }
 
-    public function getAnyoNacimiento(): int
+    public function getAnyoNacimiento(): string
     {
         return $this->anyoNacimiento;
     }
@@ -54,6 +56,11 @@ class director
     public function getLugarNacimiento(): string
     {
         return $this->lugarNacimiento;
+    }
+
+    public function getOrden(): int
+    {
+        return $this->orden;
     }
 
 

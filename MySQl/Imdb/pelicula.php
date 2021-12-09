@@ -5,17 +5,18 @@ class pelicula
 
     protected int $peliculaId;
     protected string $titulo;
-    protected directores_pelicula $directores;
-    protected generos_pelicula $generos;
-    protected actores_pelicula $actores;
+    protected array $directores;
+    protected array $generos;
+    protected array $actores;
     protected string $imagen;
     protected float $nota;
     protected int $estreno;
     protected string $trailer;
     protected string $sinopsis;
 
-    public function __construct(int $peliculaId, string $titulo, directores_pelicula $directores, generos_pelicula $generos,
-                                actores_pelicula $actores, string $imagen, float $nota, int $estreno, string $trailer, string $sinopsis)
+
+    public function __construct(int   $peliculaId, string $titulo, array $directores, array $generos,
+                                array $actores, string $imagen, float $nota, int $estreno, string $trailer, string $sinopsis)
     {
         $this->peliculaId = $peliculaId;
         $this->titulo = $titulo;
@@ -39,17 +40,17 @@ class pelicula
         return $this->titulo;
     }
 
-    public function getDirector(): directores_pelicula
+    public function getDirectores(): array
     {
         return $this->directores;
     }
 
-    public function getGenero(): generos_pelicula
+    public function getGeneros(): array
     {
         return $this->generos;
     }
 
-    public function getActor(): actores_pelicula
+    public function getActores(): array
     {
         return $this->actores;
     }
@@ -78,6 +79,5 @@ class pelicula
     {
         return $this->sinopsis;
     }
-
 
 }

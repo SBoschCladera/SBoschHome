@@ -20,6 +20,4 @@ class pais
     {
         return $this->nombre;
     }
-
-
 }

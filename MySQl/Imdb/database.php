@@ -5,16 +5,13 @@ include_once "director.php";
 include_once "genero.php";
 include_once "pais.php";
 include_once "pelicula.php";
-include_once "actores_pelicula.php";
-include_once "directores_pelicula.php";
-include_once "generos_pelicula.php";
 
 
 class database extends mysqli
 {
-    protected string $servername = "localhost";
-    protected string $username = "root";
-    protected string $password = "1234";
+    protected string $servername = "sql480.main-hosting.eu";
+    protected string $username = "u850300514_sbosch";
+    protected string $password = "x43110436H";
     protected string $dbname = "imdb";
 
     public function default()
@@ -31,9 +28,11 @@ class database extends mysqli
         }
     }
 
+    /** SELECT para seleccionar un género por ID que devuelve un Objeto **/
+
     public function getGenero($generoId): genero
     {
-        $sql = "SELECT * FROM genero WHERE id = " . $generoId;
+        $sql = "SELECT * FROM genero WHERE generoId = " . $generoId;
         $this->default();
         $query = $this->query($sql);
         $this->close();
@@ -42,9 +41,11 @@ class database extends mysqli
         return $return;
     }
 
+    /** SELECT para seleccionar un país por ID que devuelve un Objeto **/
+
     public function getPais($paisId): pais
     {
-        $sql = "SELECT * FROM pais WHERE id = " . $paisId;
+        $sql = "SELECT * FROM pais WHERE paisId = " . $paisId;
         $this->default();
         $query = $this->query($sql);
         $this->close();
@@ -53,9 +54,11 @@ class database extends mysqli
         return $return;
     }
 
+    /** SELECT para seleccionar un actor por ID que devuelve un Objeto **/
+
     public function getActor($actorId): actor
     {
-        $sql = "SELECT * FROM actor WHERE id = " . $actorId;
+        $sql = "SELECT * FROM actor WHERE actorId = " . $actorId;
         $this->default();
         $query = $this->query($sql);
         $this->close();
@@ -64,9 +67,11 @@ class database extends mysqli
         return $return;
     }
 
+    /** SELECT para seleccionar un director por ID que devuelve un Objeto **/
+
     public function getDirector($directorId): director
     {
-        $sql = "SELECT * FROM actor WHERE id = " . $directorId;
+        $sql = "SELECT * FROM actor WHERE directorId = " . $directorId;
         $this->default();
         $query = $this->query($sql);
         $this->close();
@@ -75,38 +80,126 @@ class database extends mysqli
         return $return;
     }
 
-    public function getActoresPelicula($peliculaId): actores_pelicula
+    /** SELECT para seleccionar todos los actores, devuelve un array de Objetos actor **/
+
+    public function getActores(): array    // Para el filter de actores
     {
-        $sql = "SELECT actor1Id, actor2Id, actor3Id FROM actores_pelicula WHERE peliculaId = " . $peliculaId;
+        $sql = "select * from actor";
         $this->default();
         $query = $this->query($sql);
         $this->close();
-        $result = $query->fetch_assoc();
-        $return = new actores_pelicula($result["actor1Id"], $result["actor2Id"], $result["actor3Id"]);
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new actor($result["actorId"], $result["nombre"], $result["apellidos"], $result["imagen"],
+                $result["oscars"], $result["anyoNacimiento"], $result["lugarNacimiento"]);
+        }
         return $return;
     }
 
-    public function getDirectoresPelicula($peliculaId) :directores_pelicula
+    /** SELECT para seleccionar todos los actores de una película por el ID de ésta, devuelve un array de Objetos actor **/
+
+    public function getActoresPelicula($peliculaId): array
     {
-        $sql = "SELECT director1Id, director2Id FROM directores_pelicula WHERE peliculaId = " . $peliculaId;
+        $sql = "select a1.*, 1 orden from pelicula
+inner join actor a1 on pelicula.actor1Id = a1.actorId
+where pelicula.peliculaId =  " . $peliculaId . "
+union
+select a2.*, 2 orden from pelicula
+inner join actor a2 on pelicula.actor2Id = a2.actorId
+where pelicula.peliculaId =  " . $peliculaId . "
+union
+select a3.*, 3  orden from pelicula
+inner join actor a3 on pelicula.actor3Id = a3.actorId
+where pelicula.peliculaId = " . $peliculaId;
         $this->default();
         $query = $this->query($sql);
         $this->close();
-        $result = $query->fetch_assoc();
-        $return = new directores_pelicula($result["director1Id"], $result["director2Id"]);
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new actor($result["actorId"], $result["nombre"], $result["apellidos"], $result["imagen"], $result["oscars"], $result["anyoNacimiento"], $result["lugarNacimiento"], $result["orden"]);
+        }
         return $return;
     }
 
-    public function getGenerosPelicula($peliculaId): generos_pelicula
+    /** SELECT para seleccionar todos los directores, devuelve un array de Objetos director **/
+
+    public function getDirectores(): array    // Para el filter de directores
     {
-        $sql = "SELECT genero1Id, genero2Id, genero3Id FROM generos_pelicula WHERE peliculaId = " . $peliculaId;
+        $sql = "select * from director";
         $this->default();
         $query = $this->query($sql);
         $this->close();
-        $result = $query->fetch_assoc();
-        $return = new generos_pelicula($result["genero1Id"], $result["genero2Id"], $result["genero3Id"]);
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new director($result["directorId"], $result["nombre"], $result["apellidos"], $result["imagen"],
+                $result["oscars"], $result["anyoNacimiento"], $result["lugarNacimiento"]);
+        }
         return $return;
     }
+
+    /** SELECT para seleccionar todos los directores de una película por el ID de ésta, devuelve un array de Objetos director **/
+
+    public function getDirectoresPelicula($peliculaId): array
+    {
+        $sql = "select d1.*, 1 orden from pelicula
+inner join director d1 on pelicula.director1Id = d1.directorId
+where pelicula.peliculaId =  " . $peliculaId . "
+union
+select d2.*, 2 orden from pelicula
+inner join director d2 on pelicula.director2Id = d2.directorId
+where pelicula.peliculaId =  " . $peliculaId;
+
+        $this->default();
+        $query = $this->query($sql);
+        $this->close();
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new director($result["directorId"], $result["nombre"], $result["apellidos"], $result["imagen"], $result["oscars"], $result["anyoNacimiento"], $result["lugarNacimiento"], $result["orden"]);
+        }
+        return $return;
+    }
+
+    /** SELECT para seleccionar todos los géneros, devuelve un array de Objetos género **/
+
+    public function getGeneros(): array    // Para el filter de géneros
+    {
+        $sql = "select * from genero";
+        $this->default();
+        $query = $this->query($sql);
+        $this->close();
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new genero($result["generoId"], $result["descripcion"]);
+        }
+        return $return;
+    }
+
+    /** SELECT para seleccionar todos los géneros de una película por el ID de ésta, devuelve un array de Objetos género **/
+
+    public function getGenerosPelicula($peliculaId): array
+    {
+        $sql = "select g1.*, 1 orden from pelicula
+inner join genero g1 on pelicula.genero1Id = g1.generoId
+where pelicula.peliculaId =  " . $peliculaId . "
+union
+select g2.*, 2 orden from pelicula
+inner join genero g2 on pelicula.genero2Id = g2.generoId
+where pelicula.peliculaId =  " . $peliculaId . "
+union
+select g3.*, 3  orden from pelicula
+inner join genero g3 on pelicula.genero3Id = g3.generoId
+where pelicula.peliculaId = " . $peliculaId;
+        $this->default();
+        $query = $this->query($sql);
+        $this->close();
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new genero($result["generoId"], $result["descripcion"], $result["orden"]);
+        }
+        return $return;
+    }
+
+    /** SELECT para seleccionar una película por el ID de ésta, devuelve un Objeto película **/
 
     public function getPelicula($peliculaId): pelicula
     {
@@ -115,22 +208,45 @@ class database extends mysqli
         $query = $this->query($sql);
         $this->close();
         $result = $query->fetch_assoc();
-        $return = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["directores"]),
-            $this->getGenerosPelicula($result["generos"]), $this->getActoresPelicula($result["actores"]), $result["imagen"],
+        $return = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["peliculaId"]),
+            $this->getGenerosPelicula($result["peliculaId"]), $this->getActoresPelicula($result["peliculaId"]), $result["imagen"],  // $this->getActoresPelicula($result["peliculaId"]) -> nos traemos un array de actores para esa pelicula en concreto
             $result["nota"], $result["estreno"], $result["trailer"], $result["sinopsis"]);
         return $return;
     }
 
-    public function getPeliculas(): array
+    /** SELECT para seleccionar todas las películas por el ID de ésta, devuelve un array de Objetos película.
+     * Las diferentes estructuras condicionales son para poder combinar los diferentes tipos de filtrado según sus ID
+     * mediante sus correspondientes SELECT
+     **/
+
+    public function getPeliculas($generoId, $directorId, $actorId): array
     {
         $sql = "SELECT * FROM pelicula";
+        if ($generoId != "" || $directorId != "" || $actorId != "") {
+            $first = true;
+            if ($generoId != "") {
+                $sql = $sql . ($first ? ' where ' : ' and ') . '(' . 'genero1Id = ' . $generoId . ' or genero2Id = ' . $generoId .
+                    ' or genero3Id = ' . $generoId . ')';
+                $first = false;
+            }
+            if ($directorId != "") {
+                $sql = $sql . ($first ? ' where ' : ' and ') . '(' . 'director1Id = ' . $directorId . ' or director2Id = ' . $directorId . ')';
+                $first = false;
+            }
+            if ($actorId != "") {
+                $sql = $sql . ($first ? ' where ' : ' and ') . '(' . 'actor1Id = ' . $actorId . ' or actor2Id = ' . $actorId .
+                    ' or actor3Id = ' . $actorId . ')';
+                $first = false;
+            }
+            echo $sql;
+        }
         $this->default();
         $query = $this->query($sql);
         $this->close();
         $return = array();
         while ($result = $query->fetch_assoc()) {
-            $return[] = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["directores"]),
-                $this->getGenerosPelicula($result["generos"]), $this->getActoresPelicula($result["actores"]), $result["imagen"],
+            $return[] = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["peliculaId"]),
+                $this->getGenerosPelicula($result["peliculaId"]), $this->getActoresPelicula($result["peliculaId"]), $result["imagen"],  // $this->getActoresPelicula($result["peliculaId"]) -> nos traemos un array de actores para esa pelicula en concreto
                 $result["nota"], $result["estreno"], $result["trailer"], $result["sinopsis"]);
         }
         return $return;

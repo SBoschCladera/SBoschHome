@@ -2,16 +2,16 @@
 
 class actor
 {
-
     protected int $actorId;
     protected string $nombre;
     protected string $apellidos;
     protected string $imagen;
     protected int $oscars;
-    protected int $anyoNacimiento;
+    protected string $anyoNacimiento;
     protected string $lugarNacimiento;
+    protected int $orden;
 
-    public function __construct(int $actorId, string $nombre, string $apellidos, string $imagen, int $oscars, int $anyoNacimiento, string $lugarNacimiento)
+    public function __construct(int $actorId, string $nombre, string $apellidos, string $imagen, int $oscars, string $anyoNacimiento, string $lugarNacimiento, int $orden = 0)
     {
         $this->actorId = $actorId;
         $this->nombre = $nombre;
@@ -20,6 +20,7 @@ class actor
         $this->oscars = $oscars;
         $this->anyoNacimiento = $anyoNacimiento;
         $this->lugarNacimiento = $lugarNacimiento;
+        $this->orden = $orden;
     }
 
     public function getActorId(): int
@@ -47,7 +48,7 @@ class actor
         return $this->oscars;
     }
 
-    public function getAnyoNacimiento(): int
+    public function getAnyoNacimiento(): string
     {
         return $this->anyoNacimiento;
     }
@@ -56,5 +57,11 @@ class actor
     {
         return $this->lugarNacimiento;
     }
+
+    public function getOrden(): int
+    {
+        return $this->orden;
+    }
+
 
 }
