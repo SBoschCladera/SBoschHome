@@ -63,10 +63,11 @@ function isSelected($filter, $match)
             background: #222;
             border: 1px solid #dd2476;
             color: rgba(250, 250, 250, 0.8);
-            margin-bottom: 2rem;
+            margin-top: -3rem;
+            margin-bottom: 5rem;
         }
 
-        .custom .btn:hover, .btn:focus {
+        .custom .btn:hover, .btn:focus, .register:hover, .login:hover {
             background: var(--gradient) !important;
             -webkit-background-clip: initial !important;
             -webkit-text-fill-color: #fff !important;
@@ -87,9 +88,32 @@ function isSelected($filter, $match)
         .custom {
             padding-top: 100px;
         }
+
+        .register, .login {
+            border: 1px solid #dd2476;
+            position: relative;
+            top: 25px;
+            margin-right: 1%;
+            border-radius: 5px;
+            background: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+        }
+
+        .register {
+            width: 150px;
+            height: 40px;
+            top: 82px;
+            left: 83%;
+        }
+
+        .login {
+            width: 100px;
+            height: 40px;
+            left: 93%;
+        }
     </style>
 </head>
 <body>
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
@@ -139,12 +163,19 @@ function isSelected($filter, $match)
 
                     </select>
                 </div>
-
                 <button class="btn btn-outline-success" type="submit">Filtra</button>
             </form>
         </div>
     </div>
 </nav>
+<form method="get" action="register.php">
+    <button class="register" type="submit" name="register">darse de alta</button>
+</form>
+<form method="get" action="login.php">
+    <button class="login" type="submit" name="login">login</button>
+</form>
+
+
 <div class="container mx-auto mt-4 custom">
     <div class="row">
 
