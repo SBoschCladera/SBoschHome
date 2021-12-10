@@ -9,11 +9,19 @@ include_once "pelicula.php";
 
 class database extends mysqli
 {
+    protected string $servername = "localhost";
+    protected string $username = "root";
+    protected string $password = "1234";
+    protected string $dbname = "imdb";
+
+
+
+    /*
     protected string $servername = "sql480.main-hosting.eu";
     protected string $username = "u850300514_sbosch";
     protected string $password = "x43110436H";
     protected string $dbname = "imdb";
-
+*/
     public function default()
     {
         $this->local();
