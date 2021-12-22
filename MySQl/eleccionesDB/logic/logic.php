@@ -3,7 +3,7 @@ include "./models/district.php";
 include "./models/party.php";
 include "./models/result.php";
 include "./logic/dhondt.php";
-include "./logic/database.php";
+include "./logic/Database.php";
 
 class Logic
 {

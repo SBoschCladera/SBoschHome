@@ -1,15 +1,17 @@
 <?php
 
-include_once "actor.php";
-include_once "director.php";
-include_once "genero.php";
-include_once "pais.php";
-include_once "pelicula.php";
-include_once "database.php";
+include_once "Actor.php";
+include_once "Director.php";
+include_once "Genero.php";
+include_once "Pais.php";
+include_once "Pelicula.php";
+include_once "Database.php";
 
-/**  Instanciamos la clase logic, donde haremos todos los cálculos **/
+/**  Instanciamos la database **/
 
 $dbo = new database();
+
+session_start();
 
 /**  Recuperamos todos los parámetros que el formulario envía mediante get
  * Utilizamos un operador ternario para evitar excepciones con propiedades no seteadas, por defecto será un string vacio
@@ -63,9 +65,47 @@ function isSelected($filter, $match)
             background: #222;
             border: 1px solid #dd2476;
             color: rgba(250, 250, 250, 0.8);
-            margin-top: -3rem;
-            margin-bottom: 5rem;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
         }
+
+        .selector1, .selector2, .selector3, .btn, .register, .login {
+            position: relative;
+            top: 8px;
+        }
+
+        .selector1 {
+            right: 15%;
+        }
+
+        .selector2 {
+            right: 28%;
+        }
+
+        .selector3 {
+            right: 39%;
+        }
+
+        .btn {
+            right: 37%;
+        }
+
+        .register, .login {
+            border: 1px solid #dd2476;
+            border-radius: 5px;
+            background: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+        }
+
+        .register {
+            width: 150px;
+            height: 40px;
+            left: 85%;
+        }
+
+        .login {
+            width: 100px;
+            height: 40px;
+            right: 150%;
 
         .custom .btn:hover, .btn:focus, .register:hover, .login:hover {
             background: var(--gradient) !important;
@@ -89,27 +129,6 @@ function isSelected($filter, $match)
             padding-top: 100px;
         }
 
-        .register, .login {
-            border: 1px solid #dd2476;
-            position: relative;
-            top: 25px;
-            margin-right: 1%;
-            border-radius: 5px;
-            background: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
-        }
-
-        .register {
-            width: 150px;
-            height: 40px;
-            top: 82px;
-            left: 83%;
-        }
-
-        .login {
-            width: 100px;
-            height: 40px;
-            left: 93%;
-        }
     </style>
 </head>
 <body>
@@ -121,7 +140,7 @@ function isSelected($filter, $match)
             <form class="d-flex" action="firstPage.php">
 
                 // SELECTOR POR GÉNERO
-                <div class="form-group">
+                <div class="selector1">
                     <select class="form-control me-2 form-select" aria-label="Sorting criteria" name="genero">
                         <?php
 
@@ -136,7 +155,7 @@ function isSelected($filter, $match)
                 </div>
 
                 // SELECTOR POR DIRECTOR
-                <div class="form-group">
+                <div class="selector2">
                     <select class="form-control me-2 form-select" aria-label="Sorting criteria" name="director">
                         <?php
                         echo "<option " . isSelected('', $filterByDirectorId) . " value=''>Todos los directores</option>";
@@ -151,7 +170,7 @@ function isSelected($filter, $match)
                 </div>
 
                 // SELECTOR POR ACTOR
-                <div class="form-group">
+                <div class="selector3">
                     <select class="form-control me-2 form-select" aria-label="Sorting criteria" name="actor">
                         <?php
                         echo "<option " . isSelected('', $filterByActorId) . " value=''>Todos los actores</option>";
@@ -163,19 +182,22 @@ function isSelected($filter, $match)
 
                     </select>
                 </div>
-                <button class="btn btn-outline-success" type="submit">Filtra</button>
+                <button class="btn btn-outline-success" type="submit"> Filtra</button>
+
             </form>
+
+            <form method="get" action="register.php">
+                <button class="register" type="submit" name="register">darse de alta</button>
+            </form>
+            <form method="get" action="login.php">
+                <button class="login" type="submit" name="login">login</button>
+            </form>
+
         </div>
     </div>
 </nav>
-<form method="get" action="register.php">
-    <button class="register" type="submit" name="register">darse de alta</button>
-</form>
-<form method="get" action="login.php">
-    <button class="login" type="submit" name="login">login</button>
-</form>
 
-
+<div class="topMargin" style="width: 3rem;height: 5rem"></div>
 <div class="container mx-auto mt-4 custom">
     <div class="row">
 

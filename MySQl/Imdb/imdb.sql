@@ -59,6 +59,21 @@ CREATE TABLE IF NOT EXISTS pelicula (
         FOREIGN KEY (actor1Id) REFERENCES actor(actorId),
         FOREIGN KEY (actor2Id) REFERENCES actor(actorId),
         FOREIGN KEY (actor3Id) REFERENCES actor(actorId));
+        
+        
+CREATE TABLE IF NOT EXISTS usuarios(
+    usuarioId int PRIMARY KEY AUTO_INCREMENT,
+    email varchar(255) not null,
+    password varchar(255) not null);
+        
+CREATE TABLE IF NOT EXISTS comentarios(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    peliculaId int,
+    usuarioId int not null,
+    comentario varchar(500),
+		FOREIGN KEY (peliculaId) REFERENCES pelicula(peliculaId),
+        FOREIGN KEY (usuarioId) REFERENCES usuarios(usuarioId)
+    );        
 
 
 INSERT INTO genero VALUES (1, 'Terror');

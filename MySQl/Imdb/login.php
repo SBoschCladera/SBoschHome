@@ -1,7 +1,22 @@
 <?php
+
+include_once "Database.php";
+
+$dbo = new database();
+session_start();
+
+if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]) {
+    header("Location: index.php");
+}
+
+
+$filterBy = isset($_GET["filterBy"]) ? strval($_GET["filterBy"]) : "";
+$usuarioid = null;
+$email = isset($_POST["email"]) ? strval($_POST["email"]) : "";
+$password = isset($_POST["contrasenya"]) ? strval($_POST["contrasenya"]) : "";
+
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,27 +53,33 @@
         .user {
             position: relative;
             text-align: center;
-            top: 100px;
-            left: 0px;
-            height: 30px;
+            top: 150px;
+            right: 40px;
+            width: 260px;
+            height: 40px;
+            border-radius: 30px;
         }
 
         .passwd {
             position: relative;
             text-align: center;
-            top: 120px;
-            left: 80px;
-            height: 30px;
+            top: 160px;
+            left: 40px;
+            width: 260px;
+            height: 40px;
+            border-radius: 30px;
         }
+
 
         .iniciar {
             position: relative;
             text-align: center;
-            top: 180px;
-            left: 110px;
-            height: 40px;
+            top: 170px;
+            left: 40px;
+            width: 270px;
+            height: 60px;
             font-size: 18px;
-            border-radius: 5px;
+            border-radius: 30px;
             background: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
         }
 
@@ -70,16 +91,38 @@
 <div class="contenedor">
 
     <!-- Se va a procesar en login.php y se enviará por POST, no por GET-->
-    <form action="login.php" method="post">
+    <form action="firstPage.php" method="post">
         <label class="nombre">LOGIN</label>
 
-        <input name="usuario" type="text" class="user" placeholder="Escribe tu nombre de usuario">
+        <input name="usuario" type="text" class="user" placeholder="Nombre de usuario">
         <br><br>
         <input name="palabra_secreta" type="password" class="passwd" placeholder="Contraseña">
         <br><br>
 
         <input type="submit" value="Iniciar sesión" class="iniciar">
     </form>
+
+    <?php
+
+    if (isset($_POST["email"])) {
+        $email = $_POST["email"];
+    }
+    if (isset($_POST["password"])) {
+        $password = $_POST["password"];
+    }
+
+    if (isset($email) && isset($password) && $dbo->comprobarUsuario($email, $password)) {
+        $_SESSION["loggedIn"] = true;
+        $_SESSION["user_id"] = $dbo->selectUserId($email);
+        header("Location: firstPage.php");
+
+    } else if (isset($email) && isset($password) && $email != "" && $password != "") {
+        echo "<script>
+                            alert('Usuario incorrecto');             
+              </script>";
+    }
+    ?>
+
 </div>
 
 </body>

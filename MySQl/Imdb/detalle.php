@@ -1,11 +1,12 @@
 <?php
 
-include_once "actor.php";
-include_once "director.php";
-include_once "genero.php";
-include_once "pais.php";
-include_once "pelicula.php";
-include_once "database.php";
+include_once "Actor.php";
+include_once "Director.php";
+include_once "Genero.php";
+include_once "Pais.php";
+include_once "Pelicula.php";
+include_once "Database.php";
+include_once "Comentario.php";
 
 /**  Instanciamos la clase logic, donde haremos todos los cálculos **/
 $dbo = new database();
@@ -18,6 +19,7 @@ $peliculaId = isset($_GET["peliculaId"]) ? strval($_GET["peliculaId"]) : "";
 /** Datos ya procesados **/
 $pelicula = $dbo->getPelicula($peliculaId);
 //var_dump($pelicula);
+$id = null;
 
 ?>
 
@@ -199,6 +201,32 @@ $pelicula = $dbo->getPelicula($peliculaId);
             width: 120px;
             height: 20px;
         }
+
+        textarea {
+            text-align: justify;
+            border: 1px solid #dd2476;
+            border-radius: 5px;
+            position: relative;
+            top: 330px;
+            left: 6%;
+        }
+
+        .sendButton {
+            border: 1px solid #dd2476;
+            border-radius: 5px;
+            background: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+            position: relative;
+            top: 330px;
+            left: 6%;
+        }
+
+        .sendButton:hover {
+            background: var(--gradient) !important;
+            -webkit-background-clip: initial !important;
+            -webkit-text-fill-color: #fff !important;
+            border: 5px solid #fff !important;
+            box-shadow: #222 1px 0 10px;
+        }
     </style>
 </head>
 <body>
@@ -231,7 +259,7 @@ $pelicula = $dbo->getPelicula($peliculaId);
         echo '</h5>';
         echo '<div class ="nombreDirectores">';
         foreach ($pelicula->getDirectores() as $director) {
-            echo '<div style="display:inline;margin-right:45px">' . $director->getNombre() . " " . $director->getApellidos() .'</div>';
+            echo '<div style="display:inline;margin-right:45px">' . $director->getNombre() . " " . $director->getApellidos() . '</div>';
         }
         echo '</div>';
         echo '<div class ="fechaDirectores">';
@@ -247,7 +275,7 @@ $pelicula = $dbo->getPelicula($peliculaId);
         echo '</h5>';
         echo '<div class ="nombreActores">';
         foreach ($pelicula->getActores() as $actor) {
-            echo '<div style="display:inline;margin-right:65px;">' . $actor->getNombre() . " " . $actor->getApellidos() .'</div>';
+            echo '<div style="display:inline;margin-right:65px;">' . $actor->getNombre() . " " . $actor->getApellidos() . '</div>';
         }
         echo '</div>';
         echo '<div class ="fechaActores">';
@@ -263,6 +291,24 @@ $pelicula = $dbo->getPelicula($peliculaId);
         echo '</div></div></a></div>';
 
         ?>
+        <div class="comentarios">
+            <form method="get" action="firstPage.php">
+                <textarea name="comentario" placeholder="Comentarios... " cols="90" rows="5"></textarea>
+                <p></p><input class="sendButton" type="submit" value="Enviar comentario"></p>
+
+                <?php
+
+                if (isset($_POST["email"]) && $_POST["email"] != "" &&
+                    isset($_POST["password"]) && $_POST["password"] != "")
+
+                    $dbo->insertComentario($id["id"], $_POST["peliculaId"], $_POST["usuarioId"], $_POST("comentario"));
+                $_SESSION["loggedIn"] = true;
+                $_SESSION["user_id"] = $dbo->getUsuario($_POST["email"]);
+                header("Location: firstPage.php");
+
+                ?>
+            </form>
+        </div>
 
     </div>
 </body>

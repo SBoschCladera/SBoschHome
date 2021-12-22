@@ -1,10 +1,10 @@
 <?php
 
-include_once "actor.php";
-include_once "director.php";
-include_once "genero.php";
-include_once "pais.php";
-include_once "pelicula.php";
+include_once "Actor.php";
+include_once "Director.php";
+include_once "Genero.php";
+include_once "Pais.php";
+include_once "Pelicula.php";
 
 
 class database extends mysqli
@@ -13,7 +13,6 @@ class database extends mysqli
     protected string $username = "root";
     protected string $password = "1234";
     protected string $dbname = "imdb";
-
 
 
     /*
@@ -258,5 +257,65 @@ where pelicula.peliculaId = " . $peliculaId;
                 $result["nota"], $result["estreno"], $result["trailer"], $result["sinopsis"]);
         }
         return $return;
+    }
+
+    /** Devuelve todos las peliculas que contengan en el titulo el parametro */
+    public function buscador($busqueda)
+    {
+        $sql = "SELECT * FROM peliculas WHERE titulo LIKE '%" . $busqueda . "%';";
+
+        $this->default();
+        $query = $this->query($sql);
+        $this->close();
+        $return = array();
+        while ($result = $query->fetch_assoc()) {
+            $return[] = new pelicula($result["peliculaId"], $result["titulo"], $this->getDirectoresPelicula($result["peliculaId"]),
+                $this->getGenerosPelicula($result["peliculaId"]), $this->getActoresPelicula($result["peliculaId"]), $result["imagen"],  // $this->getActoresPelicula($result["peliculaId"]) -> nos traemos un array de actores para esa pelicula en concreto
+                $result["nota"], $result["estreno"], $result["trailer"], $result["sinopsis"]);
+        }
+        return $return;
+
+    }
+
+    /* Inserta los comentarios en la tabla comentarios */
+    public function insertComentario($id, $peliculaId, $usuarioId, $comentario)
+    {
+        $sql = "INSERT INTO `comentarios` ('id', 'peliculaId', 'usuarioId', 'comentario') VALUES 
+                                            ('" . $id ."', '" . $peliculaId . "', '" . $usuarioId["usuarioId"] . "', '" . $comentario . "');";
+
+        if (!mysqli_query($this->conn, $sql)) {
+            echo "Error: " . $sql . "<br>" . mysqli_error($this->conn);
+        }
+    }
+
+    /* Inserta los usuarios en la tabla usuarios */
+    public function insertUsuario($usuarioid, $email, $contrasenya, $contrasenyaCrypt)
+    {
+        $sql = "INSERT INTO `usuarios` ('usuarioId', 'email', 'password') VALUES 
+                                            ('" . $usuarioid . "', '" . $email . "', '" . $contrasenya . "');";
+        $this->default();
+        $query = $this->query($sql);
+        $this->close();
+    }
+
+    /* Flag para comprobar si el usuario y la contraseña están en la Base de datos */
+    public function comprobarUsuario($email, $password)
+    {
+        $sql = "SELECT * FROM `usuarios` WHERE email = '" . $email . "';";
+        $query = $this->query($sql);
+        $this->close();
+
+        if (isset($query) && password_verify($password, $query["password"])) {
+            return true;
+        }
+        return false;
+    }
+
+    public function getUsuario($email)
+    {
+        $sql = 'SELECT id FROM `usuarios` WHERE email = "' . $email . '";';
+        $query = $this->query($sql);
+        $this->close();
+        return $query;
     }
 }
